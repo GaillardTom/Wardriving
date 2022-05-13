@@ -1,7 +1,7 @@
+from ast import Sub
 import sys
 import xml.etree.ElementTree as etree
 
-__author__ = "Michael Caraccio"
 
 if __name__ == '__main__':
 
@@ -22,17 +22,24 @@ if __name__ == '__main__':
     outfile = open(outputFilename, "w")
 
     # Create columns in csv
-    outfile.write("name,mac address,encryption,lat,lon")
+    outfile.write("name,mac address,encryption,wpaVersion,nbPackets,dataSize,lat,lon,firstTimeSeen,lastTimeSeen")
 
     # For each network
     for child in root:
         if child.tag == "wireless-network":
 
             essid = ""
-            bssid = ""
+            bssid = "None"
             encryption = []
-            gpslat = ""
-            gpslng = ""
+            wpaVersion = "None"
+            gpslat = "None"
+            gpslng = "None"
+            nbPackets = "None"
+            dataSize = "None"
+            firstTimeSeen = child.attrib['first-time']
+            lastTimeSeen = child.attrib['last-time']
+
+            
 
             # Parse each network
             for element in child:
@@ -42,8 +49,13 @@ if __name__ == '__main__':
                     for subelement in element:
                         if subelement.tag == "encryption":
                             encryption.append(str(subelement.text))
+                        elif subelement.tag == "wpa-version": 
+                            wpaVersion = str(subelement.text)
                         elif subelement.tag == "essid":
-                            essid = str(subelement.text)
+                            if subelement.attrib['cloaked'] == "true":
+                                essid="Cloaked"
+                            else:
+                                essid = str(subelement.text)
 
                 # Get MAC Address
                 if element.tag == "BSSID":
@@ -56,12 +68,20 @@ if __name__ == '__main__':
                             gpslat = str(gps.text)
                         if gps.tag == "avg-lon":
                             gpslng = str(gps.text)
+                if element.tag == "packets":
+                    for subelement in element: 
+                        if subelement.tag == "total":
+                            nbPackets = str(subelement.text)
+                if element.tag == "datasize":
+                    print("DataSize: ", element.text)
+                    dataSize = str(element.text)
+
 
                 encryption.sort()
 
             # Store network to csv file
             # If MODE is not specified
             if mode == "" and essid != "":
-                    outfile.write("\n" + essid + "," + bssid + "," + ' '.join(encryption) + "," + gpslat + "," + gpslng)
+                    outfile.write("\n" + essid + "," + bssid + "," + ' '.join(encryption)+ "," + wpaVersion + "," + nbPackets + ","+dataSize +  "," + gpslat + "," + gpslng + "," + firstTimeSeen + "," + lastTimeSeen)
             elif essid != "" and mode == encryption[0]:
-                    outfile.write("\n" + essid + "," + bssid + "," + ' '.join(encryption) + "," + gpslat + "," + gpslng)
+                    outfile.write("\n" + essid + "," + bssid + "," + ' '.join(encryption)+ "," + nbPackets + ","+ dataSize + "," + gpslat + "," + gpslng + "," + firstTimeSeen + "," + lastTimeSeen)
