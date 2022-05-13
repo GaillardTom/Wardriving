@@ -1,7 +1,7 @@
 from ast import Sub
 import sys
 import xml.etree.ElementTree as etree
-
+import time
 
 if __name__ == '__main__':
 
@@ -22,7 +22,7 @@ if __name__ == '__main__':
     outfile = open(outputFilename, "w")
 
     # Create columns in csv
-    outfile.write("name,mac address,encryption,wpaVersion,nbPackets,dataSize,lat,lon,firstTimeSeen,lastTimeSeen")
+    outfile.write("name,mac_address,encryption,wpaVersion,nbPackets,dataSize,lat,lon,firstTimeSeen,lastTimeSeen")
 
     # For each network
     for child in root:
@@ -85,3 +85,4 @@ if __name__ == '__main__':
                     outfile.write("\n" + essid + "," + bssid + "," + ' '.join(encryption)+ "," + wpaVersion + "," + nbPackets + ","+dataSize +  "," + gpslat + "," + gpslng + "," + firstTimeSeen + "," + lastTimeSeen)
             elif essid != "" and mode == encryption[0]:
                     outfile.write("\n" + essid + "," + bssid + "," + ' '.join(encryption)+ "," + nbPackets + ","+ dataSize + "," + gpslat + "," + gpslng + "," + firstTimeSeen + "," + lastTimeSeen)
+    time.sleep(3)
