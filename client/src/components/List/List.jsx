@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select} from '@material-ui/core';
 
-import { useStyles} from './styles';
+import useStyles from './styles';
 
 const List = () => { 
     const classes = useStyles();
@@ -14,9 +14,10 @@ const List = () => {
 
                     <InputLabel>Security</InputLabel>
                     <Select value={type} onChange={(e) =>setType(e.target.value)}>
-                        <MenuItem value="Network">Network</MenuItem>
-                        <MenuItem value="Security">Security</MenuItem>
-                        <MenuItem value="Network">Network</MenuItem>
+                        <MenuItem value="WEP">WEP</MenuItem>
+                        <MenuItem value="WPA">WPA</MenuItem>
+                        <MenuItem value="Unknown">Unknown</MenuItem>
+                        <MenuItem value="All">All</MenuItem>
 
                     </Select>
                 </FormControl>

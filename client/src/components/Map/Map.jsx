@@ -9,7 +9,7 @@ const Map = () => {
     //If screen is less than 600 px it wont render 
     const isMobile = useMediaQuery('(min-width:600px)');
 
-    const coordinates = { lat: 0, lng: 0};
+    const coordinates = { lat: 45.404476, lng: -71.888351};
 
     return ( 
         <div className={classes.mapContainer}>

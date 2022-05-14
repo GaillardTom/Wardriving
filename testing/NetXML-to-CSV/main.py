@@ -85,4 +85,3 @@ if __name__ == '__main__':
                     outfile.write("\n" + essid + "," + bssid + "," + ' '.join(encryption)+ "," + wpaVersion + "," + nbPackets + ","+dataSize +  "," + gpslat + "," + gpslng + "," + firstTimeSeen + "," + lastTimeSeen)
             elif essid != "" and mode == encryption[0]:
                     outfile.write("\n" + essid + "," + bssid + "," + ' '.join(encryption)+ "," + nbPackets + ","+ dataSize + "," + gpslat + "," + gpslng + "," + firstTimeSeen + "," + lastTimeSeen)
-    time.sleep(3)

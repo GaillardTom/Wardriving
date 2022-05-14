@@ -4,7 +4,7 @@ import { AppBar, Toolbar, Typography, InputBase, Box } from "@mui/material";
 import { ClassNames } from "@emotion/react";
 import SearchIcon from '@material-ui/icons/Search';
 
-import useStyles from './styles'
+import useStyles from './styles';
 
 
 
