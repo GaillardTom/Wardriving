@@ -39,7 +39,8 @@ app.post('/upload', upload.single('data'), async function (req, res) {
             console.log(document);
             //await collection.insertMany(document) or sum 
             rm("./" + req.file.path);
-            res.send("/data/" + req.body.fileName + ".csv").status(200);
+            res.send({path: "/data/" + req.body.fileName + ".csv",
+                        data: document}).status(200);
         
         }
         else{ 
