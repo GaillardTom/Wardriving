@@ -5,7 +5,7 @@
 Convert a .netxml file into CSV file. 
 For those who use Kismet and want to display networks on a Google Maps for example.
 
-CVS file with 5 columns : ESSID, MAC Address, encryption type, latitude, longitude
+CVS file with columns : ESSID, mac address, encryption, wpa version, number of packets, data size, latitude, longitude, firstTimeSeen, lastTimeSeen
 
 ## Code Example
 
@@ -22,11 +22,3 @@ Convert only WPA+AES-CCM encryption networks :
 ```
 python3 main.py file.netxml result.csv WPA+AES-CCM
 ```
-
-## Installation
-```
-git clone https://github.com/MichaelCaraccio/NetXML-to-CSV.git
-```
-
-## License
-MIT
