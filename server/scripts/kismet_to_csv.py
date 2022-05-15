@@ -8,23 +8,6 @@ import csv
 import kismetdb
 
 
-def ObtainPacketsInfo(parserArg):
-    table_abstraction = kismetdb.Packets(parserArg.infile)
-    column_names = ['ts_sec', 'ts_usec', 'phyname', 'sourcemac', 'destmac', 'transmac', 'frequency', 'devkey', 'lat',
-                    'lon', 'alt', 'speed', 'heading', 'packet_len', 'signal', 'datasource', 'dlt', 'packet', 'error', 'tags']
-    csv_file_mode = "wb" if sys.version_info[0] < 3 else "w"
-
-    with open(f"PacketsData{parserArg.outfile}", csv_file_mode) as csvfile:
-        csvWriter = csv.DictWriter(csvfile, delimiter="\t",
-                                   extrasaction="ignore",
-                                   fieldnames=column_names)
-        nrows = 0
-        csvWriter.writeheader()
-        for row in table_abstraction.yield_meta():
-            csvWriter.writerow(row)
-            nrows = nrows + 1
-            if nrows % 1000 == 0:
-                print("Wrote {} packets rows".format(nrows))
 
 
 def main():
@@ -67,9 +50,8 @@ def main():
         packetTable = kismetdb.Packets(results.infile)
         packetColumnNames = ["ts_sec", "ts_usec", "phyname", "sourcemac", "destmac",
                              "transmac", "frequency", "devkey", "lat", "lon",
-                             "packet_len", "signal", "datasource", "dlt", "error"]
-        dataTable = kismetdb.DataPackets(results.infile)
-        dataColumnsNames = ['phyname', "devmac"]
+                             "packet_len", "signal", "datasource", "dlt", "error", "tags"]
+       
 
     elif results.srctable == "packets":
         table_abstraction = kismetdb.Packets(results.infile)
@@ -96,7 +78,7 @@ def main():
 
     csv_file_mode = "wb" if sys.version_info[0] < 3 else "w"
 
-    with open(results.outfile, csv_file_mode) as csvfile:
+    with open(f"{results.outfile}Devices.csv", csv_file_mode) as csvfile:
         csvWriter = csv.DictWriter(csvfile, delimiter="\t",
                                    extrasaction="ignore",
                                    fieldnames=column_names)
@@ -108,7 +90,7 @@ def main():
             if nrows % 1000 == 0:
                 print("Wrote {} rows".format(nrows))
     if(results.srctable == "tom"):
-        with open(f"PacketsData{results.outfile}", csv_file_mode) as csvfile2:
+        with open(f"{results.outfile}PacketsData.csv", csv_file_mode) as csvfile2:
             csvWriter = csv.DictWriter(csvfile2, delimiter="\t",
                                        extrasaction="ignore",
                                        fieldnames=packetColumnNames)
@@ -119,18 +101,7 @@ def main():
                 nrows = nrows + 1
                 if nrows % 1000 == 0:
                     print("Wrote {} rows".format(nrows))
-        with open(f"Data{results.outfile}", csv_file_mode) as csvfile3:
-            csvWriter = csv.DictWriter(csvfile3, delimiter="\t",
-                                       extrasaction="ignore",
-                                       fieldnames=dataColumnsNames)
-            nrows = 0
-            csvWriter.writeheader()
-            print("test data:", dataTable.get_meta())
-            for row in dataTable.get_meta():
-                csvWriter.writerow(row)
-                nrows = nrows + 1
-                if nrows % 1000 == 0:
-                    print("Wrote {} rows".format(nrows))
+        
 
 
 if __name__ == "__main__":
