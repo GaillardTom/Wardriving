@@ -5,7 +5,7 @@ const multer = require('multer');
 const csvJson = require('csvtojson');
 const { rm } = require('fs/promises');
 const spawn = require('await-spawn')
-const { connectCallBack, UploadCsvToDB, UploadWigleToDB } = require('./database');
+const { connectCallBack, UploadCsvToDB, UploadWigleToDB, GetDevicesByMACFromDB, GetAllDeviceForMap } = require('./database');
 
 //const { connectCallback, CreateUser, Connect, connectToUsersDB, GetAllLocations} = require('./database');
 //var jwt = require('jsonwebtoken');
@@ -95,11 +95,26 @@ app.post('/upload', upload.single('data'), async function (req, res) {
 
 
 });
+app.get('/map', async(req, res) =>{ 
+    try{ 
+        const aps = await GetAllDeviceForMap();
+        res.send(aps)
 
-app.get('/devices', async(req,res)=> { 
+    }
+    catch{ 
+        res.status(402).send("Couldn't Get Map");
+    }
+})
+app.get('/devices/:mac', async(req,res)=> { 
 
-
-    
+    const mac = req.params.mac
+    console.log(mac)
+    const ans = await GetDevicesByMACFromDB(mac);
+    if(ans){ 
+        res.status(200).send(ans)
+    }else{ 
+        res.status(401).send("No device Found");
+    }
 });
 
 const PORT = 8080;
