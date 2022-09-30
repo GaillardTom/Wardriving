@@ -28,6 +28,7 @@ async function UploadWigleToDB(capturesPath) {
 async function UploadCsvToDB(devicesPath, packetsPath) {
     console.log('packetsPath: ', packetsPath);
     console.log('devicesPath: ', devicesPath);
+    // /console.log("🚀 ~ file: database.js ~ line 31 ~ UploadCsvToDB ~ devicesPath", devicesPath)
 
     try {
         await spawn("python", ["./scripts/ConvertCSV.py", devicesPath, packetsPath]);
