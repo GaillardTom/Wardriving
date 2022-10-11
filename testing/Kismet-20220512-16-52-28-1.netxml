@@ -1,0 +1,2841 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE detection-run SYSTEM "http://kismetwireless.net/kismet-3.1.0.dtd">
+
+<detection-run kismet-version="2016.07.R1" start-time="Thu May 12 16:52:28 2022">
+
+<card-source uuid="92eb66b8-d20b-11ec-9c58-c1030b182d03">
+ <card-source>wlan1mon:name=alfa,</card-source>
+ <card-name>alfa</card-name>
+ <card-interface>wlan1mon</card-interface>
+ <card-type>mac80211</card-type>
+ <card-packets>2187</card-packets>
+ <card-hop>true</card-hop>
+ <card-channels>1,5,9,13,48,64,112,128,144,161,2,6,10,36,52,100,116,132,149,165,3,7,11,40,56,104,120,136,153,169,4,8,12,44,60,108,124,140,157,173</card-channels>
+</card-source>
+  <wireless-network number="1" type="probe" first-time="Thu May 12 16:52:54 2022" last-time="Thu May 12 16:56:15 2022">
+    <BSSID>00:06:78:24:0B:C1</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>0</channel>
+    <freqmhz>2427 5</freqmhz>
+    <freqmhz>2447 5</freqmhz>
+    <freqmhz>2452 5</freqmhz>
+    <freqmhz>2467 3</freqmhz>
+    <maxseenrate>1000</maxseenrate>
+     <packets>
+       <LLC>18</LLC>
+       <data>0</data>
+       <crypt>0</crypt>
+       <total>18</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>0</datasize>
+    <snr-info>
+      <last_signal_dbm>-57</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-64</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-48</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>May 12 16:56:15</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:15 2022</seen-time>
+     <seen-packets>18</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="tods" first-time="Thu May 12 16:52:54 2022" last-time="Thu May 12 16:56:15 2022">
+      <client-mac>00:06:78:24:0B:C1</client-mac>
+      <client-manuf>Unknown</client-manuf>
+        <SSID first-time="Thu May 12 16:54:55 2022" last-time="Thu May 12 16:54:55 2022">
+            <type>Probe Request</type>
+            <max-rate>54.000000</max-rate>
+            <packets>1</packets>
+            <beaconrate>-1</beaconrate>
+            <encryption>None</encryption>
+        </SSID>
+        <SSID first-time="Thu May 12 16:56:15 2022" last-time="Thu May 12 16:56:15 2022">
+            <type>Probe Request</type>
+            <max-rate>54.000000</max-rate>
+            <packets>1</packets>
+            <beaconrate>-1</beaconrate>
+            <encryption>None</encryption>
+            <ssid>BELL773</ssid>
+        </SSID>
+      <channel>0</channel>
+      <freqmhz>2427 5</freqmhz>
+      <freqmhz>2447 5</freqmhz>
+      <freqmhz>2452 5</freqmhz>
+      <freqmhz>2467 3</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>18</LLC>
+         <data>0</data>
+         <crypt>0</crypt>
+         <total>18</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>0</datasize>
+      <snr-info>
+        <last_signal_dbm>-57</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-64</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-48</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:15 2022</seen-time>
+       <seen-packets>18</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="2" type="infrastructure" first-time="Thu May 12 16:52:52 2022" last-time="Thu May 12 16:56:52 2022">
+    <SSID first-time="Thu May 12 16:52:52 2022" last-time="Thu May 12 16:56:52 2022">
+        <type>Beacon</type>
+        <max-rate>144.400000</max-rate>
+        <packets>84</packets>
+        <beaconrate>10</beaconrate>
+        <wps>No</wps>
+        <encryption>WPA+PSK</encryption>
+        <encryption>WPA+AES-CCM</encryption>
+        <wpa-version>WPA2</wpa-version>
+        <essid cloaked="false">SM-N975W4600</essid>
+    </SSID>
+    <BSSID>22:C0:06:72:93:BC</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>1</channel>
+    <freqmhz>2412 30</freqmhz>
+    <freqmhz>2417 36</freqmhz>
+    <freqmhz>2447 3</freqmhz>
+    <freqmhz>2452 15</freqmhz>
+    <maxseenrate>1000</maxseenrate>
+     <packets>
+       <LLC>84</LLC>
+       <data>0</data>
+       <crypt>0</crypt>
+       <total>84</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>0</datasize>
+    <snr-info>
+      <last_signal_dbm>-32</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-86</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-28</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>May 12 16:49:02</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:52 2022</seen-time>
+     <seen-packets>84</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="fromds" first-time="Thu May 12 16:52:52 2022" last-time="Thu May 12 16:56:52 2022">
+      <client-mac>22:C0:06:72:93:BC</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>1</channel>
+      <freqmhz>2412 30</freqmhz>
+      <freqmhz>2417 36</freqmhz>
+      <freqmhz>2447 3</freqmhz>
+      <freqmhz>2452 15</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>84</LLC>
+         <data>0</data>
+         <crypt>0</crypt>
+         <total>84</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>0</datasize>
+      <snr-info>
+        <last_signal_dbm>-32</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-86</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-28</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:52 2022</seen-time>
+       <seen-packets>84</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="3" type="infrastructure" first-time="Thu May 12 16:53:00 2022" last-time="Thu May 12 16:56:53 2022">
+    <SSID first-time="Thu May 12 16:53:00 2022" last-time="Thu May 12 16:56:53 2022">
+        <type>Beacon</type>
+        <max-rate>72.200000</max-rate>
+        <packets>26</packets>
+        <beaconrate>10</beaconrate>
+        <wps>Configured</wps>
+        <dev-name>DIRECT-4W-EPSON-ET-2720 Series</dev-name>
+        <encryption>WPA+PSK</encryption>
+        <encryption>WPA+AES-CCM</encryption>
+        <wpa-version>WPA2</wpa-version>
+        <essid cloaked="false">DIRECT-4W-EPSON-ET-2720 Series</essid>
+    </SSID>
+    <BSSID>52:57:9C:94:52:C4</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>10</channel>
+    <freqmhz>2457 26</freqmhz>
+    <maxseenrate>6000</maxseenrate>
+    <carrier>IEEE 802.11b+</carrier>
+    <encoding>CCK</encoding>
+     <packets>
+       <LLC>26</LLC>
+       <data>0</data>
+       <crypt>0</crypt>
+       <total>26</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>0</datasize>
+    <snr-info>
+      <last_signal_dbm>-73</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-73</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-64</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>Mar 23 16:46:18</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:53 2022</seen-time>
+     <seen-packets>26</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="fromds" first-time="Thu May 12 16:53:00 2022" last-time="Thu May 12 16:56:53 2022">
+      <client-mac>52:57:9C:94:52:C4</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>10</channel>
+      <freqmhz>2457 26</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b+</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>26</LLC>
+         <data>0</data>
+         <crypt>0</crypt>
+         <total>26</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>0</datasize>
+      <snr-info>
+        <last_signal_dbm>-73</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-73</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-64</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:53 2022</seen-time>
+       <seen-packets>26</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="4" type="probe" first-time="Thu May 12 16:56:18 2022" last-time="Thu May 12 16:56:18 2022">
+    <BSSID>54:60:09:FE:5E:0C</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>0</channel>
+    <freqmhz>5785 4</freqmhz>
+    <maxseenrate>6000</maxseenrate>
+    <carrier>IEEE 802.11b</carrier>
+    <encoding>CCK</encoding>
+     <packets>
+       <LLC>4</LLC>
+       <data>0</data>
+       <crypt>0</crypt>
+       <total>4</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>0</datasize>
+    <snr-info>
+      <last_signal_dbm>-68</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-68</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-68</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>May 12 16:56:18</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:18 2022</seen-time>
+     <seen-packets>4</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="tods" first-time="Thu May 12 16:56:18 2022" last-time="Thu May 12 16:56:18 2022">
+      <client-mac>54:60:09:FE:5E:0C</client-mac>
+      <client-manuf>Unknown</client-manuf>
+        <SSID first-time="Thu May 12 16:56:18 2022" last-time="Thu May 12 16:56:18 2022">
+            <type>Probe Request</type>
+            <max-rate>54.000000</max-rate>
+            <packets>1</packets>
+            <beaconrate>-1</beaconrate>
+            <encryption>None</encryption>
+            <ssid>3564 oiselet</ssid>
+        </SSID>
+      <channel>0</channel>
+      <freqmhz>5785 4</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>4</LLC>
+         <data>0</data>
+         <crypt>0</crypt>
+         <total>4</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>0</datasize>
+      <snr-info>
+        <last_signal_dbm>-68</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-68</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-68</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:18 2022</seen-time>
+       <seen-packets>4</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="5" type="infrastructure" first-time="Thu May 12 16:52:58 2022" last-time="Thu May 12 16:56:58 2022">
+    <SSID first-time="Thu May 12 16:52:58 2022" last-time="Thu May 12 16:56:52 2022">
+        <type>Beacon</type>
+        <max-rate>300.000000</max-rate>
+        <packets>22</packets>
+        <beaconrate>10</beaconrate>
+        <wps>Configured</wps>
+        <encryption>WPA+PSK</encryption>
+        <encryption>WPA+AES-CCM</encryption>
+        <wpa-version>WPA+WPA2</wpa-version>
+        <essid cloaked="false">Axion-80140050</essid>
+    </SSID>
+    <BSSID>A8:5E:45:DC:EE:88</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>3</channel>
+    <freqmhz>2417 17</freqmhz>
+    <freqmhz>2422 16</freqmhz>
+    <freqmhz>2427 6</freqmhz>
+    <maxseenrate>1000</maxseenrate>
+     <packets>
+       <LLC>22</LLC>
+       <data>17</data>
+       <crypt>17</crypt>
+       <total>39</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>1668</datasize>
+    <snr-info>
+      <last_signal_dbm>-80</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-83</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-64</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>Mar 26 20:55:31</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:58 2022</seen-time>
+     <seen-packets>39</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="fromds" first-time="Thu May 12 16:52:58 2022" last-time="Thu May 12 16:56:58 2022">
+      <client-mac>A8:5E:45:DC:EE:88</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>3</channel>
+      <freqmhz>2417 16</freqmhz>
+      <freqmhz>2422 11</freqmhz>
+      <freqmhz>2427 6</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>22</LLC>
+         <data>11</data>
+         <crypt>11</crypt>
+         <total>33</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>966</datasize>
+      <snr-info>
+        <last_signal_dbm>-80</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-83</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-64</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:58 2022</seen-time>
+       <seen-packets>33</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="2" type="fromds" first-time="Thu May 12 16:53:52 2022" last-time="Thu May 12 16:53:52 2022">
+      <client-mac>AC:89:95:AD:35:C1</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2417 1</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>1</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>88</datasize>
+      <snr-info>
+        <last_signal_dbm>-80</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-80</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-80</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:53:52 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="3" type="fromds" first-time="Thu May 12 16:54:49 2022" last-time="Thu May 12 16:54:49 2022">
+      <client-mac>E0:69:95:57:C5:DC</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2422 5</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>0</LLC>
+         <data>5</data>
+         <crypt>5</crypt>
+         <total>5</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>614</datasize>
+      <snr-info>
+        <last_signal_dbm>-80</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-80</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-71</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:54:49 2022</seen-time>
+       <seen-packets>5</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="6" type="infrastructure" first-time="Thu May 12 16:52:58 2022" last-time="Thu May 12 16:56:39 2022">
+    <SSID first-time="Thu May 12 16:52:58 2022" last-time="Thu May 12 16:56:39 2022">
+        <type>Beacon</type>
+        <max-rate>300.000000</max-rate>
+        <packets>32</packets>
+        <beaconrate>10</beaconrate>
+        <wps>No</wps>
+        <encryption>WPA+PSK</encryption>
+        <encryption>WPA+AES-CCM</encryption>
+        <wpa-version>WPA2</wpa-version>
+        <essid cloaked="false">Axion_2G_Guest</essid>
+    </SSID>
+    <BSSID>A8:5E:45:DC:EE:89</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>3</channel>
+    <freqmhz>2417 16</freqmhz>
+    <freqmhz>2422 11</freqmhz>
+    <freqmhz>2427 7</freqmhz>
+    <maxseenrate>1000</maxseenrate>
+     <packets>
+       <LLC>32</LLC>
+       <data>2</data>
+       <crypt>2</crypt>
+       <total>34</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>156</datasize>
+    <snr-info>
+      <last_signal_dbm>-80</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-83</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-64</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>Mar 26 20:55:25</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:39 2022</seen-time>
+     <seen-packets>34</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="fromds" first-time="Thu May 12 16:52:58 2022" last-time="Thu May 12 16:56:39 2022">
+      <client-mac>A8:5E:45:DC:EE:89</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>3</channel>
+      <freqmhz>2417 16</freqmhz>
+      <freqmhz>2422 11</freqmhz>
+      <freqmhz>2427 7</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>32</LLC>
+         <data>2</data>
+         <crypt>2</crypt>
+         <total>34</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>156</datasize>
+      <snr-info>
+        <last_signal_dbm>-80</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-83</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-64</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:39 2022</seen-time>
+       <seen-packets>34</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="7" type="probe" first-time="Thu May 12 16:54:11 2022" last-time="Thu May 12 16:54:32 2022">
+    <BSSID>B8:27:EB:90:24:00</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>0</channel>
+    <freqmhz>2412 1</freqmhz>
+    <freqmhz>2467 1</freqmhz>
+    <maxseenrate>1000</maxseenrate>
+     <packets>
+       <LLC>2</LLC>
+       <data>0</data>
+       <crypt>0</crypt>
+       <total>2</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>0</datasize>
+    <snr-info>
+      <last_signal_dbm>-42</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-42</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-12</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>May 12 16:54:32</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:54:32 2022</seen-time>
+     <seen-packets>2</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="tods" first-time="Thu May 12 16:54:11 2022" last-time="Thu May 12 16:54:32 2022">
+      <client-mac>B8:27:EB:90:24:00</client-mac>
+      <client-manuf>Unknown</client-manuf>
+        <SSID first-time="Thu May 12 16:54:32 2022" last-time="Thu May 12 16:54:32 2022">
+            <type>Probe Request</type>
+            <max-rate>72.200000</max-rate>
+            <packets>1</packets>
+            <beaconrate>-1</beaconrate>
+            <encryption>None</encryption>
+        </SSID>
+      <channel>0</channel>
+      <freqmhz>2412 1</freqmhz>
+      <freqmhz>2467 1</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>2</LLC>
+         <data>0</data>
+         <crypt>0</crypt>
+         <total>2</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>0</datasize>
+      <snr-info>
+        <last_signal_dbm>-42</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-42</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-12</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:54:32 2022</seen-time>
+       <seen-packets>2</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="8" type="infrastructure" first-time="Thu May 12 16:52:53 2022" last-time="Thu May 12 16:56:58 2022">
+    <SSID first-time="Thu May 12 16:52:53 2022" last-time="Thu May 12 16:56:58 2022">
+        <type>Beacon</type>
+        <max-rate>144.400000</max-rate>
+        <packets>55</packets>
+        <beaconrate>10</beaconrate>
+        <wps>Configured</wps>
+        <wps-manuf>Linksys</wps-manuf>
+        <dev-name>Linksys30671</dev-name>
+        <model-name>WHW03</model-name>
+        <model-num>WHW03</model-num>
+        <encryption>WPA+PSK</encryption>
+        <encryption>WPA+AES-CCM</encryption>
+        <wpa-version>WPA2</wpa-version>
+        <essid cloaked="false">3564 oiselet</essid>
+    </SSID>
+    <BSSID>C4:41:1E:99:0C:1D</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>4</channel>
+    <freqmhz>2422 14</freqmhz>
+    <freqmhz>2427 19</freqmhz>
+    <freqmhz>2432 22</freqmhz>
+    <maxseenrate>1000</maxseenrate>
+     <packets>
+       <LLC>55</LLC>
+       <data>0</data>
+       <crypt>0</crypt>
+       <total>55</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>0</datasize>
+    <snr-info>
+      <last_signal_dbm>-70</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-71</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-45</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>May  8 00:23:32</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:58 2022</seen-time>
+     <seen-packets>55</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="fromds" first-time="Thu May 12 16:52:53 2022" last-time="Thu May 12 16:56:58 2022">
+      <client-mac>C4:41:1E:99:0C:1D</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>4</channel>
+      <freqmhz>2422 14</freqmhz>
+      <freqmhz>2427 19</freqmhz>
+      <freqmhz>2432 22</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>55</LLC>
+         <data>0</data>
+         <crypt>0</crypt>
+         <total>55</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>0</datasize>
+      <snr-info>
+        <last_signal_dbm>-70</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-71</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-45</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:58 2022</seen-time>
+       <seen-packets>55</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="9" type="infrastructure" first-time="Thu May 12 16:52:55 2022" last-time="Thu May 12 16:56:48 2022">
+    <SSID first-time="Thu May 12 16:52:55 2022" last-time="Thu May 12 16:56:48 2022">
+        <type>Beacon</type>
+        <max-rate>300.000000</max-rate>
+        <packets>25</packets>
+        <beaconrate>10</beaconrate>
+        <wps>Configured</wps>
+        <encryption>WPA+PSK</encryption>
+        <encryption>WPA+AES-CCM</encryption>
+        <wpa-version>WPA2</wpa-version>
+        <essid cloaked="false">3564 oiselet</essid>
+    </SSID>
+    <BSSID>C4:41:1E:99:0C:1E</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>48</channel>
+    <freqmhz>5240 32</freqmhz>
+    <maxseenrate>6000</maxseenrate>
+    <carrier>IEEE 802.11b</carrier>
+    <encoding>CCK</encoding>
+     <packets>
+       <LLC>25</LLC>
+       <data>7</data>
+       <crypt>7</crypt>
+       <total>32</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>1204</datasize>
+    <snr-info>
+      <last_signal_dbm>-88</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-90</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-86</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>May  8 00:23:33</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:48 2022</seen-time>
+     <seen-packets>32</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="fromds" first-time="Thu May 12 16:52:55 2022" last-time="Thu May 12 16:52:55 2022">
+      <client-mac>00:04:4B:BA:93:C1</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5240 1</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>1</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>97</datasize>
+      <snr-info>
+        <last_signal_dbm>-88</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-88</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-88</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:52:55 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="2" type="fromds" first-time="Thu May 12 16:52:55 2022" last-time="Thu May 12 16:56:48 2022">
+      <client-mac>C4:41:1E:99:0C:1E</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>48</channel>
+      <freqmhz>5240 27</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>25</LLC>
+         <data>2</data>
+         <crypt>2</crypt>
+         <total>27</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>168</datasize>
+      <snr-info>
+        <last_signal_dbm>-88</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-90</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-86</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:48 2022</seen-time>
+       <seen-packets>27</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="3" type="fromds" first-time="Thu May 12 16:53:48 2022" last-time="Thu May 12 16:53:48 2022">
+      <client-mac>C4:41:1E:99:0E:9C</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5240 1</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>1</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>76</datasize>
+      <snr-info>
+        <last_signal_dbm>-89</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-89</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-89</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:53:48 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="4" type="fromds" first-time="Thu May 12 16:53:23 2022" last-time="Thu May 12 16:53:23 2022">
+      <client-mac>C4:41:1E:99:0E:9D</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5240 1</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>1</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>160</datasize>
+      <snr-info>
+        <last_signal_dbm>-89</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-89</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-89</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:53:23 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="5" type="fromds" first-time="Thu May 12 16:55:05 2022" last-time="Thu May 12 16:55:05 2022">
+      <client-mac>D6:0B:C5:61:02:B1</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5240 2</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>2</data>
+         <crypt>2</crypt>
+         <total>2</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>703</datasize>
+      <snr-info>
+        <last_signal_dbm>-88</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-88</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-87</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:55:05 2022</seen-time>
+       <seen-packets>2</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="10" type="infrastructure" first-time="Thu May 12 16:52:51 2022" last-time="Thu May 12 16:55:55 2022">
+    <SSID first-time="Thu May 12 16:54:11 2022" last-time="Thu May 12 16:54:11 2022">
+        <type>Probe Response</type>
+        <max-rate>144.400000</max-rate>
+        <packets>1</packets>
+        <beaconrate>-1</beaconrate>
+        <wps>Configured</wps>
+        <wps-manuf>Linksys</wps-manuf>
+        <dev-name>Linksys30728</dev-name>
+        <model-name>WHW03</model-name>
+        <model-num>WHW03</model-num>
+        <encryption>WPA+PSK</encryption>
+        <encryption>WPA+AES-CCM</encryption>
+        <wpa-version>WPA2</wpa-version>
+        <essid cloaked="false">3564 oiselet</essid>
+    </SSID>
+    <BSSID>C4:41:1E:99:0D:3A</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>0</channel>
+    <freqmhz>2412 136</freqmhz>
+    <freqmhz>2417 12</freqmhz>
+    <maxseenrate>24000</maxseenrate>
+    <carrier>IEEE 802.11b+</carrier>
+    <encoding>CCK</encoding>
+    <encoding>PBCC</encoding>
+     <packets>
+       <LLC>1</LLC>
+       <data>147</data>
+       <crypt>121</crypt>
+       <total>148</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>91333</datasize>
+    <snr-info>
+      <last_signal_dbm>-14</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-74</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-13</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>Feb  5 01:41:21</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:55:55 2022</seen-time>
+     <seen-packets>148</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="fromds" first-time="Thu May 12 16:55:04 2022" last-time="Thu May 12 16:55:36 2022">
+      <client-mac>00:04:4B:BA:93:C1</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2412 1</freqmhz>
+      <freqmhz>2417 1</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+      <carrier>IEEE 802.11b+</carrier>
+      <encoding>PBCC</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>2</data>
+         <crypt>2</crypt>
+         <total>2</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>274</datasize>
+      <snr-info>
+        <last_signal_dbm>-41</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-44</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-41</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:55:36 2022</seen-time>
+       <seen-packets>2</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="2" type="fromds" first-time="Thu May 12 16:52:51 2022" last-time="Thu May 12 16:55:55 2022">
+      <client-mac>0C:37:96:59:04:6A</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2412 36</freqmhz>
+      <maxseenrate>0</maxseenrate>
+      <carrier>IEEE 802.11b+</carrier>
+      <encoding>PBCC</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>36</data>
+         <crypt>36</crypt>
+         <total>36</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>3632</datasize>
+      <snr-info>
+        <last_signal_dbm>-44</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-49</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-43</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:55:55 2022</seen-time>
+       <seen-packets>36</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="3" type="fromds" first-time="Thu May 12 16:54:36 2022" last-time="Thu May 12 16:54:36 2022">
+      <client-mac>50:57:9C:94:D2:C4</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2412 1</freqmhz>
+      <maxseenrate>0</maxseenrate>
+      <carrier>IEEE 802.11b+</carrier>
+      <encoding>PBCC</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>1</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>80</datasize>
+      <snr-info>
+        <last_signal_dbm>-44</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-44</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-44</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:54:36 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="4" type="tods" first-time="Thu May 12 16:53:26 2022" last-time="Thu May 12 16:55:36 2022">
+      <client-mac>56:91:EB:35:A7:CB</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2412 11</freqmhz>
+      <freqmhz>2417 8</freqmhz>
+      <maxseenrate>24000</maxseenrate>
+      <carrier>IEEE 802.11b+</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>19</data>
+         <crypt>0</crypt>
+         <total>19</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>456</datasize>
+      <snr-info>
+        <last_signal_dbm>-37</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-51</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-33</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:55:36 2022</seen-time>
+       <seen-packets>19</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="5" type="tods" first-time="Thu May 12 16:54:36 2022" last-time="Thu May 12 16:54:36 2022">
+      <client-mac>98:00:C6:02:0D:18</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2412 2</freqmhz>
+      <maxseenrate>11000</maxseenrate>
+       <packets>
+         <LLC>0</LLC>
+         <data>2</data>
+         <crypt>0</crypt>
+         <total>2</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>48</datasize>
+      <snr-info>
+        <last_signal_dbm>-74</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-74</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-74</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:54:36 2022</seen-time>
+       <seen-packets>2</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="6" type="tods" first-time="Thu May 12 16:52:51 2022" last-time="Thu May 12 16:55:55 2022">
+      <client-mac>B8:27:EB:90:24:00</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2412 73</freqmhz>
+      <maxseenrate>24000</maxseenrate>
+      <carrier>IEEE 802.11b+</carrier>
+      <encoding>CCK</encoding>
+      <encoding>PBCC</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>73</data>
+         <crypt>68</crypt>
+         <total>73</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>85615</datasize>
+      <snr-info>
+        <last_signal_dbm>-14</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-19</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-13</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:55:55 2022</seen-time>
+       <seen-packets>73</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="7" type="fromds" first-time="Thu May 12 16:52:58 2022" last-time="Thu May 12 16:55:55 2022">
+      <client-mac>C4:41:1E:99:0D:3A</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2412 9</freqmhz>
+      <freqmhz>2417 2</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>1</LLC>
+         <data>10</data>
+         <crypt>10</crypt>
+         <total>11</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>840</datasize>
+      <snr-info>
+        <last_signal_dbm>-38</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-42</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-37</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:55:55 2022</seen-time>
+       <seen-packets>11</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="8" type="fromds" first-time="Thu May 12 16:53:52 2022" last-time="Thu May 12 16:55:02 2022">
+      <client-mac>C4:41:1E:99:0E:9C</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2412 2</freqmhz>
+      <freqmhz>2417 1</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+      <carrier>IEEE 802.11b+</carrier>
+      <encoding>PBCC</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>3</data>
+         <crypt>3</crypt>
+         <total>3</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>228</datasize>
+      <snr-info>
+        <last_signal_dbm>-36</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-44</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-36</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:55:02 2022</seen-time>
+       <seen-packets>3</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="9" type="fromds" first-time="Thu May 12 16:55:02 2022" last-time="Thu May 12 16:55:02 2022">
+      <client-mac>C4:41:1E:99:0E:9D</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2412 1</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>1</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>160</datasize>
+      <snr-info>
+        <last_signal_dbm>-40</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-40</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-40</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:55:02 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="11" type="data" first-time="Thu May 12 16:53:57 2022" last-time="Thu May 12 16:56:56 2022">
+    <BSSID>C4:41:1E:99:0D:3C</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>0</channel>
+    <freqmhz>5745 20</freqmhz>
+    <maxseenrate>24000</maxseenrate>
+    <carrier>IEEE 802.11b</carrier>
+    <encoding>CCK</encoding>
+     <packets>
+       <LLC>0</LLC>
+       <data>20</data>
+       <crypt>15</crypt>
+       <total>20</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>1772</datasize>
+    <snr-info>
+      <last_signal_dbm>-81</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-82</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-57</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>May 12 16:56:56</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:56 2022</seen-time>
+     <seen-packets>20</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="fromds" first-time="Thu May 12 16:55:41 2022" last-time="Thu May 12 16:56:06 2022">
+      <client-mac>00:04:4B:BA:93:C1</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5745 4</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>4</data>
+         <crypt>4</crypt>
+         <total>4</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>388</datasize>
+      <snr-info>
+        <last_signal_dbm>-59</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-59</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-58</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:06 2022</seen-time>
+       <seen-packets>4</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="2" type="fromds" first-time="Thu May 12 16:55:14 2022" last-time="Thu May 12 16:55:14 2022">
+      <client-mac>2C:F0:5D:A4:25:32</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5745 1</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>1</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>120</datasize>
+      <snr-info>
+        <last_signal_dbm>-59</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-59</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-59</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:55:14 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="3" type="fromds" first-time="Thu May 12 16:55:14 2022" last-time="Thu May 12 16:55:14 2022">
+      <client-mac>50:57:9C:94:D2:C4</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5745 1</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>1</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>120</datasize>
+      <snr-info>
+        <last_signal_dbm>-59</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-59</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-59</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:55:14 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="4" type="fromds" first-time="Thu May 12 16:54:22 2022" last-time="Thu May 12 16:54:22 2022">
+      <client-mac>54:60:09:FE:5E:0C</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5745 1</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>1</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>90</datasize>
+      <snr-info>
+        <last_signal_dbm>-59</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-59</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-59</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:54:22 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="5" type="fromds" first-time="Thu May 12 16:53:57 2022" last-time="Thu May 12 16:53:57 2022">
+      <client-mac>56:91:EB:35:A7:CB</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5745 2</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>2</data>
+         <crypt>2</crypt>
+         <total>2</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>262</datasize>
+      <snr-info>
+        <last_signal_dbm>-58</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-58</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-58</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:53:57 2022</seen-time>
+       <seen-packets>2</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="6" type="fromds" first-time="Thu May 12 16:55:41 2022" last-time="Thu May 12 16:56:31 2022">
+      <client-mac>CA:41:1E:99:0C:1F</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5745 4</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>4</data>
+         <crypt>4</crypt>
+         <total>4</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>320</datasize>
+      <snr-info>
+        <last_signal_dbm>-57</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-58</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-57</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:31 2022</seen-time>
+       <seen-packets>4</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="7" type="established" first-time="Thu May 12 16:55:14 2022" last-time="Thu May 12 16:56:56 2022">
+      <client-mac>D6:0B:C5:61:02:B1</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5745 7</freqmhz>
+      <maxseenrate>24000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>7</data>
+         <crypt>2</crypt>
+         <total>7</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>472</datasize>
+      <snr-info>
+        <last_signal_dbm>-81</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-82</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-59</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:56 2022</seen-time>
+       <seen-packets>7</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="12" type="infrastructure" first-time="Thu May 12 16:52:54 2022" last-time="Thu May 12 16:56:59 2022">
+    <SSID first-time="Thu May 12 16:52:54 2022" last-time="Thu May 12 16:56:59 2022">
+        <type>Beacon</type>
+        <max-rate>144.400000</max-rate>
+        <packets>86</packets>
+        <beaconrate>10</beaconrate>
+        <wps>Configured</wps>
+        <encryption>WPA+PSK</encryption>
+        <encryption>WPA+AES-CCM</encryption>
+        <wpa-version>WPA2</wpa-version>
+        <essid cloaked="false">3564 oiselet</essid>
+    </SSID>
+    <BSSID>C4:41:1E:99:0E:9D</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>10</channel>
+    <freqmhz>2452 28</freqmhz>
+    <freqmhz>2457 47</freqmhz>
+    <freqmhz>2462 45</freqmhz>
+    <freqmhz>5180 1</freqmhz>
+    <maxseenrate>11000</maxseenrate>
+    <carrier>IEEE 802.11b</carrier>
+    <carrier>IEEE 802.11b+</carrier>
+    <encoding>CCK</encoding>
+    <encoding>PBCC</encoding>
+     <packets>
+       <LLC>86</LLC>
+       <data>35</data>
+       <crypt>33</crypt>
+       <total>121</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>3599</datasize>
+    <snr-info>
+      <last_signal_dbm>-43</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-69</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-36</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>Mar 23 16:46:17</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:59 2022</seen-time>
+     <seen-packets>121</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="fromds" first-time="Thu May 12 16:54:00 2022" last-time="Thu May 12 16:56:02 2022">
+      <client-mac>00:04:4B:BA:93:C1</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2457 3</freqmhz>
+      <freqmhz>2462 5</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+      <carrier>IEEE 802.11b+</carrier>
+      <encoding>PBCC</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>8</data>
+         <crypt>8</crypt>
+         <total>8</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>856</datasize>
+      <snr-info>
+        <last_signal_dbm>-46</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-46</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-42</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:02 2022</seen-time>
+       <seen-packets>8</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="2" type="fromds" first-time="Thu May 12 16:53:28 2022" last-time="Thu May 12 16:53:28 2022">
+      <client-mac>56:91:EB:35:A7:CB</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2457 2</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>0</LLC>
+         <data>2</data>
+         <crypt>2</crypt>
+         <total>2</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>262</datasize>
+      <snr-info>
+        <last_signal_dbm>-39</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-41</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-39</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:53:28 2022</seen-time>
+       <seen-packets>2</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="3" type="fromds" first-time="Thu May 12 16:52:59 2022" last-time="Thu May 12 16:54:00 2022">
+      <client-mac>C4:41:1E:99:0E:9C</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2457 2</freqmhz>
+      <freqmhz>2462 1</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+      <carrier>IEEE 802.11b+</carrier>
+      <encoding>PBCC</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>3</data>
+         <crypt>3</crypt>
+         <total>3</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>228</datasize>
+      <snr-info>
+        <last_signal_dbm>-42</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-45</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-39</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:54:00 2022</seen-time>
+       <seen-packets>3</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="4" type="fromds" first-time="Thu May 12 16:52:54 2022" last-time="Thu May 12 16:56:59 2022">
+      <client-mac>C4:41:1E:99:0E:9D</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>10</channel>
+      <freqmhz>2452 24</freqmhz>
+      <freqmhz>2457 30</freqmhz>
+      <freqmhz>2462 32</freqmhz>
+      <freqmhz>5180 1</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>86</LLC>
+         <data>1</data>
+         <crypt>1</crypt>
+         <total>87</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>275</datasize>
+      <snr-info>
+        <last_signal_dbm>-43</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-48</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-36</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:59 2022</seen-time>
+       <seen-packets>87</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="5" type="fromds" first-time="Thu May 12 16:53:47 2022" last-time="Thu May 12 16:56:53 2022">
+      <client-mac>CA:41:1E:99:0D:3B</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2452 4</freqmhz>
+      <freqmhz>2457 3</freqmhz>
+      <freqmhz>2462 6</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>0</LLC>
+         <data>13</data>
+         <crypt>13</crypt>
+         <total>13</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>1098</datasize>
+      <snr-info>
+        <last_signal_dbm>-40</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-45</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-40</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:53 2022</seen-time>
+       <seen-packets>13</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="6" type="tods" first-time="Thu May 12 16:53:09 2022" last-time="Thu May 12 16:53:09 2022">
+      <client-mac>D4:D2:D6:74:30:75</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2462 1</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>0</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>24</datasize>
+      <snr-info>
+        <last_signal_dbm>-59</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-59</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-59</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:53:09 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="7" type="fromds" first-time="Thu May 12 16:55:10 2022" last-time="Thu May 12 16:55:10 2022">
+      <client-mac>D6:0B:C5:61:02:B1</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2457 2</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>0</LLC>
+         <data>2</data>
+         <crypt>2</crypt>
+         <total>2</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>352</datasize>
+      <snr-info>
+        <last_signal_dbm>-42</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-42</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-42</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:55:10 2022</seen-time>
+       <seen-packets>2</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="8" type="established" first-time="Thu May 12 16:53:00 2022" last-time="Thu May 12 16:53:00 2022">
+      <client-mac>FE:44:AF:23:41:B3</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>2457 5</freqmhz>
+      <maxseenrate>11000</maxseenrate>
+      <carrier>IEEE 802.11b+</carrier>
+      <encoding>PBCC</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>5</data>
+         <crypt>4</crypt>
+         <total>5</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>504</datasize>
+      <snr-info>
+        <last_signal_dbm>-38</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-69</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-36</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:53:00 2022</seen-time>
+       <seen-packets>5</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="13" type="infrastructure" first-time="Thu May 12 16:53:00 2022" last-time="Thu May 12 16:56:53 2022">
+    <SSID first-time="Thu May 12 16:53:00 2022" last-time="Thu May 12 16:56:53 2022">
+        <type>Beacon</type>
+        <max-rate>300.000000</max-rate>
+        <packets>27</packets>
+        <beaconrate>10</beaconrate>
+        <wps>Configured</wps>
+        <encryption>WPA+PSK</encryption>
+        <encryption>WPA+AES-CCM</encryption>
+        <wpa-version>WPA2</wpa-version>
+        <essid cloaked="false">3564 oiselet</essid>
+    </SSID>
+    <BSSID>C4:41:1E:99:0E:9E</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>36</channel>
+    <freqmhz>5180 34</freqmhz>
+    <maxseenrate>6000</maxseenrate>
+    <carrier>IEEE 802.11b</carrier>
+    <encoding>CCK</encoding>
+     <packets>
+       <LLC>27</LLC>
+       <data>7</data>
+       <crypt>7</crypt>
+       <total>34</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>668</datasize>
+    <snr-info>
+      <last_signal_dbm>-53</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-54</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-52</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>Mar 23 16:46:19</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:53 2022</seen-time>
+     <seen-packets>34</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="fromds" first-time="Thu May 12 16:55:12 2022" last-time="Thu May 12 16:55:12 2022">
+      <client-mac>00:21:CC:6C:7E:DA</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5180 2</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>2</data>
+         <crypt>2</crypt>
+         <total>2</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>240</datasize>
+      <snr-info>
+        <last_signal_dbm>-54</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-54</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-54</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:55:12 2022</seen-time>
+       <seen-packets>2</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="2" type="fromds" first-time="Thu May 12 16:53:00 2022" last-time="Thu May 12 16:56:53 2022">
+      <client-mac>C4:41:1E:99:0C:1C</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5180 3</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>3</data>
+         <crypt>3</crypt>
+         <total>3</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>272</datasize>
+      <snr-info>
+        <last_signal_dbm>-53</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-54</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-52</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:53 2022</seen-time>
+       <seen-packets>3</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="3" type="fromds" first-time="Thu May 12 16:53:55 2022" last-time="Thu May 12 16:53:55 2022">
+      <client-mac>C4:41:1E:99:0E:9C</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5180 1</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>1</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>76</datasize>
+      <snr-info>
+        <last_signal_dbm>-53</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-53</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-53</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:53:55 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="4" type="fromds" first-time="Thu May 12 16:53:55 2022" last-time="Thu May 12 16:53:55 2022">
+      <client-mac>C4:41:1E:99:0E:9D</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5180 1</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>1</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>80</datasize>
+      <snr-info>
+        <last_signal_dbm>-53</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-53</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-53</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:53:55 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="5" type="fromds" first-time="Thu May 12 16:53:00 2022" last-time="Thu May 12 16:56:53 2022">
+      <client-mac>C4:41:1E:99:0E:9E</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>36</channel>
+      <freqmhz>5180 27</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>27</LLC>
+         <data>0</data>
+         <crypt>0</crypt>
+         <total>27</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>0</datasize>
+      <snr-info>
+        <last_signal_dbm>-53</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-54</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-52</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:53 2022</seen-time>
+       <seen-packets>27</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="14" type="infrastructure" first-time="Thu May 12 16:53:03 2022" last-time="Thu May 12 16:56:56 2022">
+    <SSID first-time="Thu May 12 16:53:03 2022" last-time="Thu May 12 16:56:56 2022">
+        <type>Beacon</type>
+        <max-rate>300.000000</max-rate>
+        <packets>32</packets>
+        <beaconrate>10</beaconrate>
+        <wps>No</wps>
+        <encryption>WPA+PSK</encryption>
+        <encryption>WPA+AES-CCM</encryption>
+        <wpa-version>WPA2</wpa-version>
+        <essid cloaked="false">3564 oiselet</essid>
+    </SSID>
+    <BSSID>C4:41:1E:99:0E:9F</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>149</channel>
+    <freqmhz>5745 43</freqmhz>
+    <maxseenrate>6000</maxseenrate>
+    <carrier>IEEE 802.11b</carrier>
+    <encoding>CCK</encoding>
+     <packets>
+       <LLC>32</LLC>
+       <data>11</data>
+       <crypt>10</crypt>
+       <total>43</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>1004</datasize>
+    <snr-info>
+      <last_signal_dbm>-53</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-54</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-46</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>Mar 23 16:46:36</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:56 2022</seen-time>
+     <seen-packets>43</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="fromds" first-time="Thu May 12 16:55:41 2022" last-time="Thu May 12 16:56:06 2022">
+      <client-mac>00:04:4B:BA:93:C1</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5745 4</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>4</data>
+         <crypt>4</crypt>
+         <total>4</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>388</datasize>
+      <snr-info>
+        <last_signal_dbm>-53</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-53</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-53</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:06 2022</seen-time>
+       <seen-packets>4</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="2" type="tods" first-time="Thu May 12 16:53:57 2022" last-time="Thu May 12 16:53:57 2022">
+      <client-mac>2A:98:A9:35:B2:0D</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5745 1</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>0</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>24</datasize>
+      <snr-info>
+        <last_signal_dbm>-46</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-46</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-46</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:53:57 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="3" type="fromds" first-time="Thu May 12 16:54:22 2022" last-time="Thu May 12 16:54:22 2022">
+      <client-mac>54:60:09:FE:5E:0C</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5745 1</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>1</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>90</datasize>
+      <snr-info>
+        <last_signal_dbm>-51</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-51</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-51</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:54:22 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="4" type="fromds" first-time="Thu May 12 16:53:03 2022" last-time="Thu May 12 16:56:56 2022">
+      <client-mac>C4:41:1E:99:0E:9F</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>149</channel>
+      <freqmhz>5745 32</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>32</LLC>
+         <data>0</data>
+         <crypt>0</crypt>
+         <total>32</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>0</datasize>
+      <snr-info>
+        <last_signal_dbm>-53</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-54</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-52</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:56 2022</seen-time>
+       <seen-packets>32</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="5" type="fromds" first-time="Thu May 12 16:55:41 2022" last-time="Thu May 12 16:56:31 2022">
+      <client-mac>CA:41:1E:99:0D:3B</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5745 4</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>4</data>
+         <crypt>4</crypt>
+         <total>4</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>336</datasize>
+      <snr-info>
+        <last_signal_dbm>-53</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-53</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-53</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:31 2022</seen-time>
+       <seen-packets>4</seen-packets>
+      </seen-card>
+    </wireless-client>
+    <wireless-client number="6" type="fromds" first-time="Thu May 12 16:55:14 2022" last-time="Thu May 12 16:55:14 2022">
+      <client-mac>D6:0B:C5:61:02:B1</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>0</channel>
+      <freqmhz>5745 1</freqmhz>
+      <maxseenrate>6000</maxseenrate>
+      <carrier>IEEE 802.11b</carrier>
+      <encoding>CCK</encoding>
+       <packets>
+         <LLC>0</LLC>
+         <data>1</data>
+         <crypt>1</crypt>
+         <total>1</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>166</datasize>
+      <snr-info>
+        <last_signal_dbm>-53</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-53</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-53</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:55:14 2022</seen-time>
+       <seen-packets>1</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="15" type="infrastructure" first-time="Thu May 12 16:52:53 2022" last-time="Thu May 12 16:56:46 2022">
+    <SSID first-time="Thu May 12 16:52:53 2022" last-time="Thu May 12 16:56:46 2022">
+        <type>Beacon</type>
+        <max-rate>144.400000</max-rate>
+        <packets>65</packets>
+        <beaconrate>10</beaconrate>
+        <wps>No</wps>
+        <encryption>WPA+PSK</encryption>
+        <encryption>WPA+AES-CCM</encryption>
+        <wpa-version>WPA2</wpa-version>
+        <essid cloaked="true"></essid>
+    </SSID>
+    <BSSID>CA:41:1E:99:0C:1D</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>4</channel>
+    <freqmhz>2422 14</freqmhz>
+    <freqmhz>2427 20</freqmhz>
+    <freqmhz>2432 31</freqmhz>
+    <maxseenrate>1000</maxseenrate>
+     <packets>
+       <LLC>65</LLC>
+       <data>0</data>
+       <crypt>0</crypt>
+       <total>65</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>0</datasize>
+    <snr-info>
+      <last_signal_dbm>-69</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-73</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-47</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>May  8 00:23:31</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:46 2022</seen-time>
+     <seen-packets>65</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="fromds" first-time="Thu May 12 16:52:53 2022" last-time="Thu May 12 16:56:46 2022">
+      <client-mac>CA:41:1E:99:0C:1D</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>4</channel>
+      <freqmhz>2422 14</freqmhz>
+      <freqmhz>2427 20</freqmhz>
+      <freqmhz>2432 31</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>65</LLC>
+         <data>0</data>
+         <crypt>0</crypt>
+         <total>65</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>0</datasize>
+      <snr-info>
+        <last_signal_dbm>-69</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-73</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-47</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:46 2022</seen-time>
+       <seen-packets>65</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="16" type="infrastructure" first-time="Thu May 12 16:52:51 2022" last-time="Thu May 12 16:56:52 2022">
+    <SSID first-time="Thu May 12 16:52:51 2022" last-time="Thu May 12 16:56:52 2022">
+        <type>Beacon</type>
+        <max-rate>144.400000</max-rate>
+        <packets>69</packets>
+        <beaconrate>10</beaconrate>
+        <wps>No</wps>
+        <encryption>WPA+PSK</encryption>
+        <encryption>WPA+AES-CCM</encryption>
+        <wpa-version>WPA2</wpa-version>
+        <essid cloaked="true"></essid>
+    </SSID>
+    <BSSID>CA:41:1E:99:0D:3A</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>1</channel>
+    <freqmhz>2412 31</freqmhz>
+    <freqmhz>2417 37</freqmhz>
+    <freqmhz>2452 1</freqmhz>
+    <maxseenrate>1000</maxseenrate>
+     <packets>
+       <LLC>69</LLC>
+       <data>0</data>
+       <crypt>0</crypt>
+       <total>69</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>0</datasize>
+    <snr-info>
+      <last_signal_dbm>-39</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-89</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-36</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>Feb  5 01:39:38</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:52 2022</seen-time>
+     <seen-packets>69</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="fromds" first-time="Thu May 12 16:52:51 2022" last-time="Thu May 12 16:56:52 2022">
+      <client-mac>CA:41:1E:99:0D:3A</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>1</channel>
+      <freqmhz>2412 31</freqmhz>
+      <freqmhz>2417 37</freqmhz>
+      <freqmhz>2452 1</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>69</LLC>
+         <data>0</data>
+         <crypt>0</crypt>
+         <total>69</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>0</datasize>
+      <snr-info>
+        <last_signal_dbm>-39</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-89</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-36</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:52 2022</seen-time>
+       <seen-packets>69</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+  <wireless-network number="17" type="infrastructure" first-time="Thu May 12 16:52:54 2022" last-time="Thu May 12 16:56:59 2022">
+    <SSID first-time="Thu May 12 16:52:54 2022" last-time="Thu May 12 16:56:59 2022">
+        <type>Beacon</type>
+        <max-rate>144.400000</max-rate>
+        <packets>88</packets>
+        <beaconrate>10</beaconrate>
+        <wps>No</wps>
+        <encryption>WPA+PSK</encryption>
+        <encryption>WPA+AES-CCM</encryption>
+        <wpa-version>WPA2</wpa-version>
+        <essid cloaked="true"></essid>
+    </SSID>
+    <BSSID>CA:41:1E:99:0E:9D</BSSID>
+    <manuf>Unknown</manuf>
+    <channel>10</channel>
+    <freqmhz>2452 25</freqmhz>
+    <freqmhz>2457 30</freqmhz>
+    <freqmhz>2462 33</freqmhz>
+    <maxseenrate>1000</maxseenrate>
+     <packets>
+       <LLC>88</LLC>
+       <data>0</data>
+       <crypt>0</crypt>
+       <total>88</total>
+       <fragments>0</fragments>
+       <retries>0</retries>
+     </packets>
+     <datasize>0</datasize>
+    <snr-info>
+      <last_signal_dbm>-43</last_signal_dbm>
+      <last_noise_dbm>0</last_noise_dbm>
+      <last_signal_rssi>0</last_signal_rssi>
+      <last_noise_rssi>0</last_noise_rssi>
+      <min_signal_dbm>-45</min_signal_dbm>
+      <min_noise_dbm>0</min_noise_dbm>
+      <min_signal_rssi>1024</min_signal_rssi>
+      <min_noise_rssi>1024</min_noise_rssi>
+      <max_signal_dbm>-36</max_signal_dbm>
+      <max_noise_dbm>-256</max_noise_dbm>
+      <max_signal_rssi>0</max_signal_rssi>
+      <max_noise_rssi>0</max_noise_rssi>
+    </snr-info>
+    <bsstimestamp>Mar 23 16:46:17</bsstimestamp>
+    <cdp-device></cdp-device>
+    <cdp-portid></cdp-portid>
+    <seen-card>
+     <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+     <seen-time>Thu May 12 16:56:59 2022</seen-time>
+     <seen-packets>88</seen-packets>
+    </seen-card>
+    <wireless-client number="1" type="fromds" first-time="Thu May 12 16:52:54 2022" last-time="Thu May 12 16:56:59 2022">
+      <client-mac>CA:41:1E:99:0E:9D</client-mac>
+      <client-manuf>Unknown</client-manuf>
+      <channel>10</channel>
+      <freqmhz>2452 25</freqmhz>
+      <freqmhz>2457 30</freqmhz>
+      <freqmhz>2462 33</freqmhz>
+      <maxseenrate>1000</maxseenrate>
+       <packets>
+         <LLC>88</LLC>
+         <data>0</data>
+         <crypt>0</crypt>
+         <total>88</total>
+         <fragments>0</fragments>
+         <retries>0</retries>
+       </packets>
+       <datasize>0</datasize>
+      <snr-info>
+        <last_signal_dbm>-43</last_signal_dbm>
+        <last_noise_dbm>0</last_noise_dbm>
+        <last_signal_rssi>0</last_signal_rssi>
+        <last_noise_rssi>0</last_noise_rssi>
+        <min_signal_dbm>-45</min_signal_dbm>
+        <min_noise_dbm>0</min_noise_dbm>
+        <min_signal_rssi>1024</min_signal_rssi>
+        <min_noise_rssi>1024</min_noise_rssi>
+        <max_signal_dbm>-36</max_signal_dbm>
+        <max_noise_dbm>-256</max_noise_dbm>
+        <max_signal_rssi>0</max_signal_rssi>
+        <max_noise_rssi>0</max_noise_rssi>
+      </snr-info>
+      <seen-card>
+       <seen-uuid>92eb66b8-d20b-11ec-9c58-c1030b182d03</seen-uuid>
+       <seen-time>Thu May 12 16:56:59 2022</seen-time>
+       <seen-packets>88</seen-packets>
+      </seen-card>
+    </wireless-client>
+  </wireless-network>
+</detection-run>

@@ -6,7 +6,7 @@ LOGFILE=/home/pi/uploadlogs/kismetupload.log
 HOME_SSID=YOUR_HOME_SSID
 HOME_USER=YOUR_HOME_USER
 HOME_IP=YOUR_HOME_SERVER_IP
-KISMET_STORAGE_PATH=/OUR/KISMET/STORAGE/PATH/
+KISMET_STORAGE_PATH="C:\\Users\\tomga\\Documents\\Kismet\\$(date "+%m%d%Y %T").kismet"
 
 (
     echo "$(date "+%m%d%Y %T") : Starting work"
