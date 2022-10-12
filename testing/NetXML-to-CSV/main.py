@@ -55,7 +55,7 @@ if __name__ == '__main__':
                             if subelement.attrib['cloaked'] == "true":
                                 essid="Cloaked"
                             else:
-                                essid = str(subelement.text)
+                                essid = str(subelement.text).replace(",", " ")
 
                 # Get MAC Address
                 if element.tag == "BSSID":
