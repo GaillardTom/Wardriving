@@ -5,7 +5,7 @@ const multer = require('multer');
 const csvJson = require('csvtojson');
 const { rm } = require('fs/promises');
 const spawn = require('await-spawn')
-const { connectCallBack, UploadCsvToDB, UploadWigleToDB, GetDevicesByMACFromDB, GetAllDeviceForMap } = require('./database');
+const { connectCallBack, UploadCsvToDB, UploadWigleToDB, GetDevicesByMACFromDB, GetAllDeviceForMap, UploadNetxmlCSVToDB } = require('./database');
 
 //const { connectCallback, CreateUser, Connect, connectToUsersDB, GetAllLocations} = require('./database');
 //var jwt = require('jsonwebtoken');
@@ -48,24 +48,26 @@ app.post('/csv', upload.single('wigle'), async function(req, res){
 });
 app.post('/upload', upload.single('data'), async function (req, res) {
     if(req.file){
-        
-        if(req.file.mimetype == "application/octet-stream" && req.body.fileName){ 
+        console.log(req.file);
+        console.log(req.file.path);
+        console.log(req.body.fileName);
+        if(/*req.file.mimetype == "application/octet-stream" && */req.body.fileName){ 
             console.log(req.file, req.body);
             console.log('req.file.mimetype: ', req.file.mimetype);
         
             console.log('Path: ', req.file.path);
-            console.log("req.file.path.replace('.kismet', '')", req.file.path.replace('.kismet', ''));
-            const python = await spawn('python', ['./scripts/kismet_to_csv.py', "--in", "./" + req.file.path, "--out", './' + req.file.path.replace('.kismet', '')]);
-            console.log('python: ', python);
+            //console.log("req.file.path.replace('.kismet', '')", req.file.path.replace('.kismet', ''));
+            const python = await spawn('python', ['../testing/NetXML-to-CSV/main.py', "./" + req.file.path, "./" + req.file.path.replace('.netxml', '.csv')]);
             console.log("converting to json...");
             //const deviceDoc = await csvJson().fromFile('./' + req.file.path.replace('.kismet', 'Devices.csv'));
             //const packetsDoc = await csvJson().fromFile('./'+ req.file.path.replace('.kismet', 'PacketsData.csv'));
 
-            const devicesFile = req.file.path.replace('.kismet', "Devices.csv");
-            const packetsFile = req.file.path.replace('.kismet', "PacketsData.csv");
-
-            const ans = await UploadCsvToDB("./"+devicesFile, "./"+packetsFile);
-            if( ans){ 
+            //const devicesFile = req.file.path.replace('.kismet', "Devices.csv");
+            //const packetsFile = req.file.path.replace('.kismet', "PacketsData.csv");
+            //const csvFile = req.file.path.replace('')
+            console.log("done converting to json", python);
+            const ans = await UploadNetxmlCSVToDB(".\\"+ req.file.path.replace('.netxml', '.csv'));
+            if(ans){ 
                 res.send({pathPackets: req.file.path.replace('.kismet', 'PacketsData.csv'),
                 pathDevices: req.file.path.replace('.kismet', 'Devices.csv'),
                 }).status(200);

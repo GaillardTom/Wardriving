@@ -41,7 +41,21 @@ async function UploadCsvToDB(devicesPath, packetsPath) {
         return false;
     }
 }
+async function UploadNetxmlCSVToDB(csvPath) {
+    console.log('csvPath: ', csvPath);
+    // /console.log("🚀 ~ file: database.js ~ line 31 ~ UploadCsvToDB ~ devicesPath", devicesPath)
 
+    try {
+        await spawn("python", ["./scripts/ConvertCSV.py", csvPath]);
+
+        return true;
+
+    } catch (err) {
+        console.log('err: ', err);
+
+        return false;
+    }
+}
 async function GetDevicesByMACFromDB(macAddress) {
 
     const collection = warDB.collection('captures');
@@ -91,5 +105,6 @@ module.exports = {
     UploadCsvToDB,
     UploadWigleToDB,
     GetDevicesByMACFromDB,
-    GetAllDeviceForMap
+    GetAllDeviceForMap,
+    UploadNetxmlCSVToDB
 }
