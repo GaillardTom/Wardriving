@@ -1,6 +1,6 @@
 const { MongoClient, ObjectId } = require('mongodb');
 const spawn = require('await-spawn');
-
+const fs = require('fs');
 // Connection URL
 const wardriveurl = 'mongodb://localhost:27017';
 const wardriveClient = new MongoClient(wardriveurl);
@@ -99,6 +99,25 @@ async function GetAllDeviceForMap() {
     return apList;
 
 }
+async function GetAllLocationsForMap() {
+    const collection = warDB.collection('csvCollection');
+    const locations = await collection.find({}).toArray();
+    console.log('locations: ', locations);
+    return locations;
+
+}
+function WriteJSONFile(data, path) {
+
+    fs.writeFile('../locations.json', JSON.stringify(data), function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("The file was saved!");
+    });
+}
+   
+
+
 
 module.exports = {
     connectCallBack: connectToUsersDB,
@@ -106,5 +125,7 @@ module.exports = {
     UploadWigleToDB,
     GetDevicesByMACFromDB,
     GetAllDeviceForMap,
-    UploadNetxmlCSVToDB
+    UploadNetxmlCSVToDB,
+    GetAllLocationsForMap,
+    WriteJSONFile
 }

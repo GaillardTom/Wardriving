@@ -5,15 +5,17 @@ const multer = require('multer');
 const csvJson = require('csvtojson');
 const { rm } = require('fs/promises');
 const spawn = require('await-spawn')
-const { connectCallBack, UploadCsvToDB, UploadWigleToDB, GetDevicesByMACFromDB, GetAllDeviceForMap, UploadNetxmlCSVToDB } = require('./database');
+const { connectCallBack, UploadCsvToDB, UploadWigleToDB, GetDevicesByMACFromDB, GetAllDeviceForMap, UploadNetxmlCSVToDB, GetAllLocationsForMap, WriteJSONFile } = require('./database');
 
 //const { connectCallback, CreateUser, Connect, connectToUsersDB, GetAllLocations} = require('./database');
 //var jwt = require('jsonwebtoken');
 //const {CheckJWT} = require('./middlewares/auth');
 var morgan = require('morgan');
+
 //const services = require('./services/services');
 const bodyParser = require('body-parser');
 const app = express();
+app.use(cors());
 //const graphRoute = require('./graph_routes/graph_routes')
 const path = require('path');
 const { delimiter } = require('path');
@@ -32,6 +34,21 @@ app.use('/static', express.static(path.join(__dirname, 'uploads')));
 app.get('/', (req, res) => {
     res.send("Wassup").status(200);
 });
+
+app.get('/all', async (req,res) => {
+   
+    const ans =  await GetAllLocationsForMap();
+    if(ans){
+    
+   // WriteJSONFile(ans);
+    console.log("works");
+    res.send(ans).status(200);
+    }
+    else{
+    res.status(401).send("No devices Found");
+    }
+})
+
 app.post('/csv', upload.single('wigle'), async function(req, res){ 
     if(req.file){ 
         try{ 
@@ -118,6 +135,8 @@ app.get('/devices/:mac', async(req,res)=> {
         res.status(401).send("No device Found");
     }
 });
+
+
 
 const PORT = 8080;
 connectCallBack(()=> { 
