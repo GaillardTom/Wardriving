@@ -14,8 +14,7 @@ const Header = () => {
   * @param place
   */
 //const [address, setAddress] = React.useState('');
-     };
-
+ 
     const classes = useStyles();
     return (
         <AppBar position="static">
@@ -41,7 +40,7 @@ const Header = () => {
             </Toolbar>
         </ AppBar>
     );
-
+    }
 
 /*
  <div className={classes.search}>
