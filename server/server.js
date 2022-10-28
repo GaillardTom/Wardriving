@@ -31,17 +31,14 @@ var storage = multer.diskStorage({
   
 var upload = multer({ storage: storage });
 app.use('/static', express.static(path.join(__dirname, 'uploads')));
+
 app.get('/', (req, res) => {
     res.send("Wassup").status(200);
 });
 
 app.get('/all', async (req,res) => {
-   
     const ans =  await GetAllLocationsForMap();
     if(ans){
-    
-   // WriteJSONFile(ans);
-    console.log("works");
     res.send(ans).status(200);
     }
     else{
