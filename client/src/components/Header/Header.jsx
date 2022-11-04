@@ -54,7 +54,6 @@ const Header = (props) => {
            setMarker(response.data);
            props.searchUpdate(response.data);
            props.searchState(true);
-           console.log("Response: ");
         }).catch((error) => {
             alert(error);
         })

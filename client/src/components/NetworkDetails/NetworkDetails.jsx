@@ -13,7 +13,7 @@ const searchState = props.searchState;
 
     const fetchData = async () => {
         const response = await axios.get('http://localhost:8080/all').catch((res) => {
-          console.log("Error: ", res);
+          alert("Error: ", res);
         })
         console.log("Response: ", response);
         if (response.status === 200) {

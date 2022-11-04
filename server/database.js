@@ -145,8 +145,6 @@ function GetByEncryptionFromDB(Encryption) {
 
 module.exports = {
     connectCallBack: connectToUsersDB,
-    UploadCsvToDB,
-    UploadWigleToDB,
     GetDevicesByMACFromDB,
     GetAllDeviceForMap,
     UploadNetxmlCSVToDB,
