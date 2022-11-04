@@ -6,7 +6,7 @@ const csvJson = require('csvtojson');
 const { rm } = require('fs/promises');
 const spawn = require('await-spawn')
 const { connectCallBack, UploadCsvToDB, UploadWigleToDB, GetDevicesByMACFromDB, GetAllDeviceForMap, UploadNetxmlCSVToDB, GetAllLocationsForMap, WriteJSONFile } = require('./database');
-
+const searchRoutes = require('./routes/search');
 //const { connectCallback, CreateUser, Connect, connectToUsersDB, GetAllLocations} = require('./database');
 //var jwt = require('jsonwebtoken');
 //const {CheckJWT} = require('./middlewares/auth');
@@ -31,6 +31,7 @@ var storage = multer.diskStorage({
   
 var upload = multer({ storage: storage });
 app.use('/static', express.static(path.join(__dirname, 'uploads')));
+app.use('/search', searchRoutes);
 
 app.get('/', (req, res) => {
     res.send("Wassup").status(200);

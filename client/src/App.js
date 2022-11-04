@@ -9,6 +9,18 @@ import NetworkDetails from "./components/NetworkDetails/NetworkDetails";
 const App = () => {
 
     const  [marker,setMarker] = useState({});
+    const [updateMarker, setUpdateMarker] = useState({});
+    const [booly, setBooly] = useState(false);
+
+    const UpdateBooly = (booly) => {
+        console.log("UpdateBooly: ", booly);
+        setBooly(booly);
+    }
+ 
+    const handleSearchMarker = (updateMarker) => {
+        console.log("Update Marker: ", updateMarker);
+        setUpdateMarker(updateMarker);
+    }
     const handleMarkerChange = (marker) => {
 
         if(marker.name )
@@ -20,14 +32,14 @@ const App = () => {
     return (
         <>
             <CssBaseline />
-            <Header />
+            <Header searchUpdate={handleSearchMarker} searchState={UpdateBooly}/>
             <Grid container spacing={3} style={{ width: '100%' }}>
                 <Grid item xs={12} md={4}>
                     <List />           
-                    <NetworkDetails selectedMarker = {marker} />
+                    <NetworkDetails selectedMarker={marker} searchUpdate={updateMarker} searchState={booly} />
                 </Grid>
                 <Grid item xs={12} md={8}>
-                    <Map updateMarker = {handleMarkerChange}/>
+                    <Map updateMarker = {handleMarkerChange} searchState={UpdateBooly}/>
                 </Grid>
             </Grid>
         </>

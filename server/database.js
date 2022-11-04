@@ -102,7 +102,7 @@ async function GetAllDeviceForMap() {
 async function GetAllLocationsForMap() {
     const collection = warDB.collection('csvCollection');
     const locations = await collection.find({}).toArray();
-    console.log('locations: ', locations);
+   // console.log('locations: ', locations);
     return locations;
 
 }
@@ -116,8 +116,30 @@ function WriteJSONFile(data, path) {
     });
 }
    
+function GetByNameFromDB(SSID) {
+    const collection = warDB.collection('csvCollection');
+   
+    const device = collection.findOne({ name: SSID });
+    return device;
+}
 
+function GetByMacFromDB(MAC) {
+    const collection = warDB.collection('csvCollection');
+    const device = collection.findOne({ mac_address: MAC });
+    return device;
+}
 
+function GetByWpaFromDB(WPA) {
+    const collection = warDB.collection('csvCollection');
+    const device = collection.findOne({ wpaVersion: WPA });
+    return device;
+}
+
+function GetByEncryptionFromDB(Encryption) {
+    const collection = warDB.collection('csvCollection');
+    const device = collection.findOne({ encryption: Encryption });
+    return device;
+}
 
 module.exports = {
     connectCallBack: connectToUsersDB,
@@ -127,5 +149,10 @@ module.exports = {
     GetAllDeviceForMap,
     UploadNetxmlCSVToDB,
     GetAllLocationsForMap,
-    WriteJSONFile
+    WriteJSONFile,
+    GetByNameFromDB,
+    GetByMacFromDB,
+    GetByWpaFromDB,
+    GetByEncryptionFromDB
+
 }

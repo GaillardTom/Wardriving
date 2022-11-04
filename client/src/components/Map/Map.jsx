@@ -13,6 +13,8 @@ import { Marker } from "@react-google-maps/api";
 const Map = (props) => {
 props.updateMarker('test');
 
+//props.searchUpdate('test');
+
   const classes = useStyles();
   //If screen is less than 600 px it wont render 
   const isMobile = useMediaQuery('(min-width:600px)');
@@ -33,8 +35,9 @@ props.updateMarker('test');
 
   useEffect(() => {
     fetchData().then((data) => {
-      console.log(data);
+      // console.log(data);
         setMarkers(data);
+        
     })
     }, []);
 
@@ -58,7 +61,11 @@ const onMapClick = (marker) => {
   if (marker.event.target.title === markers[i].name && count === 0) 
   {
     count++;
+    props.searchState(false);
+    
     props.updateMarker(markers[i])
+    
+    
   }
 }
 }
