@@ -20,7 +20,7 @@ async function connectToUsersDB(callback) {
 
     return 'done.';
 }
-
+/*
 async function UploadWigleToDB(capturesPath) {
     await spawn("python", ["./scripts/UploadWigle.py", capturesPath]);
 
@@ -41,6 +41,8 @@ async function UploadCsvToDB(devicesPath, packetsPath) {
         return false;
     }
 }
+*/
+
 async function UploadNetxmlCSVToDB(csvPath) {
     console.log('csvPath: ', csvPath);
     // /console.log("🚀 ~ file: database.js ~ line 31 ~ UploadCsvToDB ~ devicesPath", devicesPath)

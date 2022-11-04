@@ -35,7 +35,7 @@ props.updateMarker('test');
 
   useEffect(() => {
     fetchData().then((data) => {
-      // console.log(data);
+        console.log(data);
         setMarkers(data);
         
     })
@@ -43,20 +43,26 @@ props.updateMarker('test');
 
     const renderMarks = (map, maps) => {
      markers.forEach((marker) => {
+      console.log("🚀 ~ file: Map.jsx ~ line 57 ~ markers.forEach ~ marker", marker.name)
       let mark = new maps.Marker({
          
           position: { lat: parseFloat(marker.lat), lng: parseFloat(marker.lon)},
           map,
-          title: marker.name,
-          key: marker._id
+          title:  marker.name,
+          key: marker._id,
+          name: {name: (marker.name)}
           });
-      
+          console.log(mark)
           return mark;
          }
       )};
+     
 
 const onMapClick = (marker) => {
+ console.log("🚀 ~ file: Map.jsx ~ line 62 ~ onMapClick ~ marker", marker)
  let count = 0;
+  console.log('Marker', marker.event.target.title);
+  console.log("🚀 ~ file: Map.jsx ~ line 64 ~ onMapClick ~ marker", this)
   for (let i = 0; i < markers.length; i++) {
   if (marker.event.target.title === markers[i].name && count === 0) 
   {
@@ -64,7 +70,6 @@ const onMapClick = (marker) => {
     props.searchState(false);
     
     props.updateMarker(markers[i])
-    
     
   }
 }
@@ -82,6 +87,7 @@ const onMapClick = (marker) => {
           onChange={''}
           onClick={onMapClick}
           onGoogleApiLoaded={ (({map, maps}) => renderMarks(map, maps))}
+          yesIWantToUseGoogleMapApiInternals={true}
         >
         </GoogleMapReact>
       </div>
