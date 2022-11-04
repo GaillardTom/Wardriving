@@ -35,7 +35,7 @@ props.updateMarker('test');
 
   useEffect(() => {
     fetchData().then((data) => {
-      // console.log(data);
+        console.log(data);
         setMarkers(data);
         
     })
@@ -53,12 +53,14 @@ props.updateMarker('test');
           key: marker._id
 
           });
-      
+          console.log(mark)
           return mark;
          }
       )};
+     
 
 const onMapClick = (marker) => {
+ console.log("🚀 ~ file: Map.jsx ~ line 62 ~ onMapClick ~ marker", marker)
  let count = 0;
  let nameChecker
 
@@ -93,6 +95,7 @@ const onMapClick = (marker) => {
           onChange={''}
           onClick={onMapClick}
           onGoogleApiLoaded={ (({map, maps}) => renderMarks(map, maps))}
+          yesIWantToUseGoogleMapApiInternals={true}
         >
         </GoogleMapReact>
       </div>

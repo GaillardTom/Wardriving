@@ -3,9 +3,9 @@
 LOGFILE=/home/pi/uploadlogs/kismetupload.log
 
 #customize the following to suit your needs
-HOME_SSID=YOUR_HOME_SSID
-HOME_USER=YOUR_HOME_USER
-HOME_IP=YOUR_HOME_SERVER_IP
+HOME_SSID="3564 oiselet"
+HOME_USER="tomga"
+HOME_IP="192.168.1.241"
 KISMET_STORAGE_PATH="C:\\Users\\tomga\\Documents\\Kismet\\$(date "+%m%d%Y %T").kismet"
 RASPBERRY_PATH="/home/pi/kismetUploads/"
 (
