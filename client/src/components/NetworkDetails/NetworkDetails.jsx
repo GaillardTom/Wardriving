@@ -28,7 +28,6 @@ const searchState = props.searchState;
     }, []);
  
     const checkWhatToRender = () => {
-      console.log("searchstate",  searchState);
       if (searchState === true) {
        
         return (
@@ -52,7 +51,6 @@ const searchState = props.searchState;
        
       }
       else {
-        console.log("selectedMarker", selectedMarker);
         return (
           <div className={classes.container}>
             <h2>Network Details</h2>

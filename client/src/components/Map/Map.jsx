@@ -7,7 +7,7 @@ import { Paper, Typography, useMediaQuery } from '@material-ui/core';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import useStyles from './styles';
 import axios from 'axios';
-import { Marker } from "@react-google-maps/api";
+import * as $ from 'jquery';
 
 
 const Map = (props) => {
@@ -43,12 +43,15 @@ props.updateMarker('test');
 
     const renderMarks = (map, maps) => {
      markers.forEach((marker) => {
+      const name = (marker.name).toString();
       let mark = new maps.Marker({
          
           position: { lat: parseFloat(marker.lat), lng: parseFloat(marker.lon)},
-          map,
           title: marker.name,
+          name: marker.name,
+          map,
           key: marker._id
+
           });
       
           return mark;
@@ -57,15 +60,23 @@ props.updateMarker('test');
 
 const onMapClick = (marker) => {
  let count = 0;
+ let nameChecker
+
+ if ($(marker.event.target).closest('div').attr('title') === undefined) {
+    // FOR BRAVE
+    nameChecker = marker.event.target.title
+  }
+  else {
+    nameChecker = $(marker.event.target).closest('div').attr('title');
+    // FOR EDGE
+  }
+
   for (let i = 0; i < markers.length; i++) {
-  if (marker.event.target.title === markers[i].name && count === 0) 
+  if (nameChecker === markers[i].name && count === 0) 
   {
     count++;
     props.searchState(false);
-    
     props.updateMarker(markers[i])
-    
-    
   }
 }
 }

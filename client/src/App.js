@@ -13,12 +13,12 @@ const App = () => {
     const [booly, setBooly] = useState(false);
 
     const UpdateBooly = (booly) => {
-        console.log("UpdateBooly: ", booly);
+        //console.log("UpdateBooly: ", booly);
         setBooly(booly);
     }
  
     const handleSearchMarker = (updateMarker) => {
-        console.log("Update Marker: ", updateMarker);
+        //console.log("Update Marker: ", updateMarker);
         setUpdateMarker(updateMarker);
     }
     const handleMarkerChange = (marker) => {
