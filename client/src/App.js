@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import List from "./components/List/List";
 import Map from "./components/Map/Map";
 import NetworkDetails from "./components/NetworkDetails/NetworkDetails";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
 
@@ -42,6 +43,7 @@ const App = () => {
                     <Map updateMarker = {handleMarkerChange} searchState={UpdateBooly}/>
                 </Grid>
             </Grid>
+           <Footer />
         </>
     );
 };

@@ -65,15 +65,16 @@ app.post('/upload', upload.single('data'), async function (req, res) {
     if(req.file){
         console.log(req.file);
         console.log(req.file.path);
-        console.log(req.body.fileName);
-        if(/*req.file.mimetype == "application/octet-stream" && */req.body.fileName){ 
+        console.log(req.body.filename);
+        if(/*req.file.mimetype == "application/octet-stream" && */req.file.filename){ 
             console.log(req.file, req.body);
             console.log('req.file.mimetype: ', req.file.mimetype);
         
             console.log('Path: ', req.file.path);
+            console.log('converting to csv...')
             //console.log("req.file.path.replace('.kismet', '')", req.file.path.replace('.kismet', ''));
             const python = await spawn('python', ['../testing/NetXML-to-CSV/main.py', "./" + req.file.path, "./" + req.file.path.replace('.netxml', '.csv')]);
-            console.log("converting to json...");
+            console.log("Done converting to csv");
             //const deviceDoc = await csvJson().fromFile('./' + req.file.path.replace('.kismet', 'Devices.csv'));
             //const packetsDoc = await csvJson().fromFile('./'+ req.file.path.replace('.kismet', 'PacketsData.csv'));
 
@@ -83,9 +84,10 @@ app.post('/upload', upload.single('data'), async function (req, res) {
             console.log("done converting to json", python);
             const ans = await UploadNetxmlCSVToDB(".\\"+ req.file.path.replace('.netxml', '.csv'));
             if(ans){ 
-                res.send({pathPackets: req.file.path.replace('.kismet', 'PacketsData.csv'),
-                pathDevices: req.file.path.replace('.kismet', 'Devices.csv'),
-                }).status(200);
+                res.send({
+                    path: req.file.path.replace('.netxml', '.csv'),
+                })
+                    .status(200);
             }
             else{ 
                 res.status(304).send("File Not uploaded to DB");
@@ -100,12 +102,12 @@ app.post('/upload', upload.single('data'), async function (req, res) {
         else{ 
             rm("./" + req.file.path);
     
-            res.status(406).send("Wrong extension or no name for the file");
+            res.send("Wrong extension or no name for the file").status(406);
         }
 
     }
     else{ 
-        res.status(406).send("no file provided");
+        res.send("no file provided").status(406);
     }
     
     
