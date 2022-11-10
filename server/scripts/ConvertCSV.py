@@ -1,7 +1,7 @@
 import pymongo 
 import pandas as pd
 import sys
-
+import math
 
 # CONSTANTS 
 #csvCollection = ConnToDB()
@@ -27,6 +27,19 @@ def GetEntries(mac):
         return test
     else: 
         return []
+
+
+"""
+Check The distance between the two points and returns true if the point are not within 25 feet of each other
+else returns false, takess 4 coordinates as input (x1, y1, x2, y2)
+
+"""
+def CheckDist(x1, y1, x2, y2): 
+    if(math.dist([x1, y1], [x2, y2]) <= 0.00022321514286586752):
+        return False
+    else:
+        return True
+
 
 def CheckForDuplicates(df):
     #print(df)
