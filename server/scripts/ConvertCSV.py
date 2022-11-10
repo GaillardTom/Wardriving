@@ -60,20 +60,24 @@ def main():
     #csvCollection = ConnToDB()
     csvDF = pd.read_csv(f'{sys.argv[1]}', delimiter=',')
     print(csvDF)
-    CheckForDuplicates(csvDF)
-    
-
-#CheckForDuplicates(df=csvDF)
+    #CheckForDuplicates(csvDF)
+    InsertToDB(csvDF)
 
 
-#DFdict = csvDF.to_dict('records')
-
-#csvCollection.insert_many(DFdict)
+def InsertToDB(dataFrame):
+    DFdict = dataFrame.to_dict('records')
+    _id = csvCollection.insert_many(DFdict)
+    if(_id != None):
+        print('Insert Successful')
+        return True 
+    else: 
+        print('Insert Failed')
+        return False
 
 if __name__ == '__main__':
     try: 
         main()
     except Exception as e:
         print(e)
-        print('Error')
-        sys.exit(1)
+        print('Error while uploading to database')
+        sys.exit(2)
