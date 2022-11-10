@@ -39,7 +39,7 @@ const List = (props) => {
     return (
         <div className={classes.container}>
             <Typography variant="h4"> Networks Around You </Typography>
-            <InputLabel>Security</InputLabel>
+            <InputLabel>Filter by Security</InputLabel>
             <FormControl className={classes.FormControl}>
                 <Select  onChange={(e) => GetWifiByConstraint(e.target.value)}> 
                     <MenuItem value="None">None</MenuItem>
