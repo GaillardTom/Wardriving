@@ -10,7 +10,7 @@ const Footer = (props) => {
 
     
     const uploadFile = (e) => {
-        
+        getFileName(e);
         console.log(e.target.files[0]);
         e.preventDefault();
         if(String(e.target.files[0].name).includes('.netxml')) {
@@ -35,6 +35,10 @@ const Footer = (props) => {
         }
     } 
 
+    //Create function to get the file name
+    const getFileName = (e) => {
+        console.log(e.target.files[0].name);
+    }
     
     useEffect(() => {
 
@@ -71,7 +75,7 @@ const Footer = (props) => {
     const classes = useStyles();
     return ( 
         <div className={classes.divButton}>
-            <Button className={classes.upload} color="success" variant="contained" component="label">Upload <input type="file" hidden onChange={uploadFile}></input></Button>
+            <Button className={classes.upload} color="success" variant="contained" component="label">Upload<input type="file" hidden onChange={uploadFile}></input></Button>
 
         </div>
         
