@@ -11,103 +11,115 @@ import * as $ from 'jquery';
 
 
 const Map = (props) => {
-props.updateMarker('test');
 
-//props.searchUpdate('test');
+  props.updateMarker('test');
+  const secu = props.checkSecurityBool
+  const secuList = props.listDetails;
+  
 
   const classes = useStyles();
+  
   //If screen is less than 600 px it wont render 
   const isMobile = useMediaQuery('(min-width:600px)');
 
   const coordinates = { lat: 45.404476, lng: -71.888351 };
   const [markers, setMarkers] = useState([]);
 
- 
-      const fetchData = async () => {
-        const response = await axios.get('http://localhost:8080/all').catch((res) => {
-          console.log("Error: ", res);
-        })
-        console.log("Response: ", response);
-        if (response.status === 200) {
-          return response.data;
-        }
-      }
+
+  const fetchData = async () => {
+    const response = await axios.get('http://localhost:8080/all').catch((res) => {
+      alert("Error: ", res);
+    })
+    if (response.status === 200) {
+      return response.data;
+    }
+  }
 
   useEffect(() => {
     fetchData().then((data) => {
-        console.log(data);
-        setMarkers(data);
-        
+      setMarkers(data);
+      props.setList(data);
     })
-    }, []);
+  }, []);
 
-    const renderMarks = (map, maps) => {
-     markers.forEach((marker) => {
-      const name = (marker.name).toString();
-      let mark = new maps.Marker({
-         
-          position: { lat: parseFloat(marker.lat), lng: parseFloat(marker.lon)},
+  const renderMarks = (map, maps) => {
+    if (secu === false || props.checkSecurity === "All") {
+      markers.forEach((marker) => {
+        let mark = new maps.Marker({
+          position: { lat: parseFloat(marker.lat), lng: parseFloat(marker.lon) },
           title: marker.name,
           name: marker.name,
           map,
           key: marker._id
+        });
+        return mark;
+      });
+    }
+    else {
 
-          });
-          console.log(mark)
-          return mark;
-         }
-      )};
-     
-
-const onMapClick = (marker) => {
- console.log("🚀 ~ file: Map.jsx ~ line 62 ~ onMapClick ~ marker", marker)
- let count = 0;
- let nameChecker
-
- if ($(marker.event.target).closest('div').attr('title') === undefined) {
-    // FOR BRAVE
-    nameChecker = marker.event.target.title
-  }
-  else {
-    nameChecker = $(marker.event.target).closest('div').attr('title');
-    // FOR EDGE
+      secuList.forEach((marker) => {
+        let mark = new maps.Marker({
+          position: { lat: parseFloat(marker.lat), lng: parseFloat(marker.lon) },
+          title: marker.name,
+          name: marker.name,
+          map,
+          key: marker._id
+        });
+        return mark;
+      });
+    }
   }
 
-  for (let i = 0; i < markers.length; i++) {
-  if (nameChecker === markers[i].name && count === 0) 
-  {
-    count++;
-    props.searchState(false);
-    props.updateMarker(markers[i])
+  const onMapClick = (marker) => {
+    let count = 0;
+    let nameChecker
+
+    if ($(marker.event.target).closest('div').attr('title') === undefined) {
+      // FOR BRAVE
+      nameChecker = marker.event.target.title
+    }
+    else {
+      nameChecker = $(marker.event.target).closest('div').attr('title');
+      // FOR EDGE
+    }
+
+    for (let i = 0; i < markers.length; i++) {
+      if (nameChecker === markers[i].name && count === 0) {
+        count++;
+        props.searchState(false);
+        props.updateMarker(markers[i])
+        console.log("sda")
+        props.displayDetailsBool(true)
+      }
+    }
   }
+
+  return (
+    <div className={classes.mapContainer}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: 'AIzaSyCTQNteh6dCZypdz6QueTQFPwmVK4-gNyk' }}
+        defaultCenter={coordinates}
+        center={coordinates}
+        defaultZoom={14}
+        margin={[50, 50, 50, 50]}
+        options={''}
+        onChange={''}
+        key={props.checkSecurity}
+        onClick={onMapClick}
+        onGoogleApiLoaded={(({ map, maps }) => renderMarks(map, maps))}
+        yesIWantToUseGoogleMapApiInternals={true}
+      >
+      </GoogleMapReact>
+    </div>
+  );
 }
-}
-
-    return (
-      <div className={classes.mapContainer}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: 'AIzaSyCTQNteh6dCZypdz6QueTQFPwmVK4-gNyk' }}
-          defaultCenter={coordinates}
-          center={coordinates}
-          defaultZoom={14}
-          margin={[50, 50, 50, 50]}
-          options={''}
-          onChange={''}
-          onClick={onMapClick}
-          onGoogleApiLoaded={ (({map, maps}) => renderMarks(map, maps))}
-          yesIWantToUseGoogleMapApiInternals={true}
-        >
-        </GoogleMapReact>
-      </div>
-    );
-  }
 
 export class MapContainer extends Component {
 
-    state = {
-      showingInfoWindow: false,
-      activeMarker: {},
-      selectedPlace: {},
-    };
-  }
-  export default Map;
+  state = {
+    showingInfoWindow: false,
+    activeMarker: {},
+    selectedPlace: {},
+  };
+}
+export default Map;

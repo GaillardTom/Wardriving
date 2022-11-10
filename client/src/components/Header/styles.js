@@ -9,8 +9,13 @@ export default makeStyles((theme) => ({
         alignItems: 'center',
         textAlign: 'center',
         display: 'flex',
-
+        cursor: 'pointer',
+        textDecoration: 'none',
+        color: 'inherit',
+        backgroundColor: 'inherit',
+       '& hover': { backgroundColor: 'rgba(0, 0, 0, 0.08)' },
       },
+     
       search: {
         position: 'relative',
         borderRadius: theme.shape.borderRadius,
