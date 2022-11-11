@@ -78,7 +78,7 @@ const Header = (props) => {
 
     const Naviguater = () => {
         //Naviguate to homepage
-       window.location.href = "http://localhost:3000/map";
+       window.location.href = "http://localhost:3000/";
     }
 
     const handleKeyPress = (event) => {

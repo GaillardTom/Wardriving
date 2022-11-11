@@ -27,6 +27,17 @@ export default makeStyles((theme) => ({
   list: {
     height: '75vh', overflow: 'auto',
   },
+  column: {
+    float: 'left',
+    width: '50%',
+  },
+  
+  /* Clear floats after the columns */
+  row:{
+    content: "",
+    display: 'table',
+    clear: 'both'
+  }
 
 
 }));
