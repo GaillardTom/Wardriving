@@ -41,6 +41,8 @@ def CheckDist(x1, y1, x2, y2):
         return True
 
 
+
+
 def CheckForDuplicates(df):
     #print(df)
 
@@ -52,19 +54,22 @@ def CheckForDuplicates(df):
             print("test")
             for mac in df[element]:
                 duplicate = GetEntries(mac=mac)
-                print(duplicate)
-                print(df.loc[df['mac_address'] == mac]['lastTimeSeen'])
-                #print('duplicate:', duplicate)
-                #if(duplicate != None):
-                print(duplicate)
-                print('Duplicate Found')
-                if (df.loc[df['mac_address'] == mac]['lastTimeSeen'] < duplicate.loc[duplicate['mac_address'] == mac]['lastTimeSeen']):
-                    print('Newer Entry Found')
-                        #csvCollection.delete_one({'mac_address': df[element]})
-                    return True
-                else:
-                    print('No Duplicate Found')
-                    return False
+               
+                for idx, element in duplicate.iterrows(): 
+                    print('element', idx,  element['lat'])
+                    print('element', idx,  element['lon'])
+                    isSamePlace = CheckDist(element['lon'], element['lat'], df.loc[df['mac_address'] == mac]['lon'], df.loc[df['mac_address'] == mac]['lat'])
+                    if(isSamePlace == True):
+                        print("Not duplicate")
+                        """
+                    elif(isSamePlace == False and element['lastTimeSeen']  <= df.loc[df['mac_address'] == mac]['lastTimeSeen']):
+                        print("Duplicate")
+                        df.drop(df.loc[df['mac_address'] == mac].index, inplace=True)
+                        print(df)
+                        """
+                    else:
+                        print("Duplicate")
+                        csvCollection.delete_one({'_id': element['_id']})
         
 
 
@@ -73,7 +78,7 @@ def main():
     #csvCollection = ConnToDB()
     csvDF = pd.read_csv(f'{sys.argv[1]}', delimiter=',')
     print(csvDF)
-    #CheckForDuplicates(csvDF)
+    CheckForDuplicates(csvDF)
     InsertToDB(csvDF)
 
 

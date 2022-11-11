@@ -11,8 +11,7 @@ export default function Routing() {
         <BrowserRouter>
             <Routes>
                 <Route path="/">
-                    <Route index element={<Upload />} />
-                    <Route path="map" element={<App />} />
+                    <Route path="/" element={<App />} />
                 </Route>
             </Routes>
         </BrowserRouter>
