@@ -13,16 +13,30 @@ import * as $ from 'jquery';
 const Map = (props) => {
 
   props.updateMarker('test');
+
   const secu = props.checkSecurityBool
   const secuList = props.listDetails;
-  
 
   const classes = useStyles();
-  
+
   //If screen is less than 600 px it wont render 
   const isMobile = useMediaQuery('(min-width:600px)');
 
-  const coordinates = { lat: 45.404476, lng: -71.888351 };
+  // Variables for coordinates and zoom
+  let coordinates = { lat: 45.404476, lng: -71.888351 };
+  let zoom = 14
+
+  // Set the coordinates and zoom if the user searched for a location
+  if (props.searchUpdate !== "test" && props.searchUpdate !== undefined && Object.keys(props.searchUpdate).length !== 0) {
+
+    // Set the coordinates to the searched location
+    coordinates = { lat: parseFloat(props.searchUpdate.lat), lng: parseFloat(props.searchUpdate.lon) }
+
+    // Set the zoom value
+    zoom = 20
+  }
+
+
   const [markers, setMarkers] = useState([]);
 
 
@@ -85,11 +99,20 @@ const Map = (props) => {
 
     for (let i = 0; i < markers.length; i++) {
       if (nameChecker === markers[i].name && count === 0) {
-        count++;
-        props.searchState(false);
-        props.updateMarker(markers[i])
-        console.log("sda")
-        props.displayDetailsBool(true)
+        // Check if the security filter is on
+        if (props.checkSecurity === markers[i].encryption && props.checkSecurity !== "All") {
+          count++;
+          props.searchState(false);
+          props.updateMarker(markers[i])
+          props.displayDetailsBool(true)
+        }
+        // The security filter is off
+        else if (props.checkSecurity === "All") {
+          count++;
+          props.searchState(false);
+          props.updateMarker(markers[i])
+          props.displayDetailsBool(true)
+        }
       }
     }
   }
@@ -100,7 +123,8 @@ const Map = (props) => {
         bootstrapURLKeys={{ key: 'AIzaSyCTQNteh6dCZypdz6QueTQFPwmVK4-gNyk' }}
         defaultCenter={coordinates}
         center={coordinates}
-        defaultZoom={14}
+        defaultZoom={zoom}
+        zoom={zoom}
         margin={[50, 50, 50, 50]}
         options={''}
         onChange={''}

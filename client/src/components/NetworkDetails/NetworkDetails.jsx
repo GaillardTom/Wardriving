@@ -57,6 +57,14 @@ const NetworkDetails = (props) => {
           <div>{searchUpdate.lat}</div>
           <h3>Longitude</h3>
           <div>{searchUpdate.lon}</div>
+          <h3>Packets</h3>
+          <div>{selectedMarker.nbPackets}</div>
+          <h3>Data Size</h3>
+          <div>{selectedMarker.dataSize}</div>
+          <h3>First Time Seen</h3>
+          <div>{selectedMarker.firstTimeSeen}</div>
+          <h3>Last Time Seen</h3>
+          <div>{selectedMarker.lastTimeSeen}</div>
           </Box>
         </div>
       
@@ -81,6 +89,14 @@ const NetworkDetails = (props) => {
           <div>{selectedMarker.lat}</div>
           <h3>Longitude</h3>
           <div>{selectedMarker.lon}</div>
+          <h3>Packets</h3>
+          <div>{selectedMarker.nbPackets}</div>
+          <h3>Data Size</h3>
+          <div>{selectedMarker.dataSize}</div>
+          <h3>First Time Seen</h3>
+          <div>{selectedMarker.firstTimeSeen}</div>
+          <h3>Last Time Seen</h3>
+          <div>{selectedMarker.lastTimeSeen}</div>
           </Box>
         </div>
       )

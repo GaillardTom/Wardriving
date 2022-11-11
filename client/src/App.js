@@ -22,6 +22,10 @@ const App = () => {
     // Display the network details?
     const [displayDetails, setDisplayDetails] = useState(false);
 
+        // Return coordinates of the researched location
+        const [location, setLocation] = useState({});
+
+
     const UpdateBooly = (booly) => {
         setBooly(booly);
     }
@@ -65,20 +69,30 @@ const App = () => {
         }
     };
 
+    const Location = (lat, lon) => {
+        setLocation({ lat: lat, lng: lon });
+    }
+
     return (
         <>
             <CssBaseline />
             <Header searchUpdate={handleSearchMarker} searchState={UpdateBooly} setSecurityBool={handleSecurityBoolChange} displayDetailsBool={handleDisplayDetailsChange}/>
+          
             <Grid container spacing={3} style={{ width: '100%' }}>
+           
                 <Grid item xs={12} md={4}>
-                    <List listDetails={list} setSecuList={handleSecuListChange} setSecurityBool={handleSecurityBoolChange} checkSecurityBool={securityBool} security={handleSecurityChange} />
+              
+                    <List listDetails={list} setSecuList={handleSecuListChange} setSecurityBool={handleSecurityBoolChange} checkSecurityBool={securityBool} security={handleSecurityChange}/>
+                    <Footer />
                     <NetworkDetails selectedMarker={marker} searchUpdate={updateMarker} searchState={booly} displayDetails={displayDetails} displayDetailsBool={handleDisplayDetailsChange}/>
                 </Grid>
+                
                 <Grid item xs={12} md={8}>
-                    <Map updateMarker={handleMarkerChange} searchState={UpdateBooly} setList={handleListChange} checkSecurityBool={securityBool} listDetails={secuList} checkSecurity={security} displayDetailsBool={handleDisplayDetailsChange} />
+               
+                    <Map updateMarker={handleMarkerChange} searchState={UpdateBooly} setList={handleListChange} checkSecurityBool={securityBool} listDetails={secuList} checkSecurity={security} displayDetailsBool={handleDisplayDetailsChange} searchUpdate={updateMarker}/>
                 </Grid>
             </Grid>
-           <Footer />
+           
         </>
     );
 };

@@ -45,6 +45,6 @@ export default makeStyles((theme) => ({
         display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', position: 'fixed', 
       },
       divButton: {
-        display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', marginTop: '1%',
-      }
+         marginLeft: '30px', marginRight: '10%',  justifyContent: 'right', alignItems: 'center', textAlign: 'center',  display:'flex' ,marginBottom: '10%',
+      },
 }))

@@ -14,6 +14,9 @@ const Header = (props) => {
     const [searchBy, setSearchBy] = React.useState('');
     const [marker, setMarker] = useState({});
 
+
+
+
     useState(() => {
         props.searchUpdate('test');
         setSearchBy('test');
@@ -43,6 +46,7 @@ const Header = (props) => {
 
         axios.get('http://localhost:8080/search' + values).then((response) => {
             setMarker(response.data);
+           // Location(response.data.lat, response.data.lon);
             props.searchUpdate(response.data);
             props.searchState(true);
         }).catch((error) => {
@@ -55,8 +59,11 @@ const Header = (props) => {
 
     const Search = () => {
         if (info.length !== 0 && searchBy !== 'test') {
+
             // Call the get from database function to get the network details from the database
             GetFromDb(info);
+            
+           // Location(info.lat, info.lng);
             props.displayDetailsBool(true);
         }
         else {
@@ -70,7 +77,15 @@ const Header = (props) => {
     }
 
     const Naviguater = () => {
+        //Naviguate to homepage
        window.location.href = "http://localhost:3000/map";
+    }
+
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {    
+            // Call the search method 
+            Search();
+        }
     }
 
     const classes = useStyles();
@@ -94,9 +109,9 @@ const Header = (props) => {
                             <MenuItem value="MAC">MAC</MenuItem>
                         </Select>
                     </FormControl>
-                    <InputBase className="search-bar" classes={{ root: classes.inputRoot, input: classes.inputInput }} onChange={(e) => getInfo(e.target.value)} />
+                    <InputBase className="search-bar" classes={{ root: classes.inputRoot, input: classes.inputInput }} onChange={(e) => getInfo(e.target.value)} onKeyDown={(e) => handleKeyPress(e)}/>
                 </div>
-                <IconButton size="large" aria-label="search" color="inherit" onClick={Search}>
+                <IconButton size="large" aria-label="search" color="inherit" onClick={Search} >
                     <SearchIcon />
                 </IconButton>
             </Toolbar>
