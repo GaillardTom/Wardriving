@@ -47,34 +47,33 @@ const NetworkDetails = (props) => {
         <Box className={classes.box}>
         <CloseIcon onClick={CloseWindow} className={classes.closeIcon} />
           <h2>Network Details</h2>
-          <div className="row">
-
-          <div className="column">
-            <h3>Network Name:</h3>
-            <div>{searchUpdate.name}</div>
-            <h3>Mac Address</h3>
-            <div>{searchUpdate.mac_address}</div>
-            <h3>WPA Version</h3>
-            <div>{searchUpdate.wpaVersion}</div>
-            <h3>Encryption</h3>
-            <div>{searchUpdate.encryption}</div>
-            <h3>Latitude</h3>
-            <div>{searchUpdate.lat}</div>
-            <h3>Longitude</h3>
-            <div>{searchUpdate.lon}</div>
-          </div>
-          <div className="column">
+          <Grid container spacing={1} >
+            <Grid container item xs={5} direction="column" >
+              <h3>Network Name:</h3>
+              <div>{searchUpdate.name}</div>
+              <h3>Mac Address</h3>
+              <div>{searchUpdate.mac_address}</div>
+              <h3>WPA Version</h3>
+              <div>{searchUpdate.wpaVersion}</div>
+              <h3>Encryption</h3>
+              <div>{searchUpdate.encryption}</div>
+              <h3>Latitude</h3>
+              <div>{searchUpdate.lat}</div>
+              <h3>Longitude</h3>
+              <div>{searchUpdate.lon}</div>
+            
+          </Grid>
+          <Grid container item xs={5} direction="column" >
             <h3>Packets</h3>
-            <div>{selectedMarker.nbPackets}</div>
+            <div>{searchUpdate.nbPackets}</div>
             <h3>Data Size</h3>
-            <div>{selectedMarker.dataSize}</div>
+            <div>{searchUpdate.dataSize}</div>
             <h3>First Time Seen</h3>
-            <div>{selectedMarker.firstTimeSeen}</div>
+            <div>{searchUpdate.firstTimeSeen}</div>
             <h3>Last Time Seen</h3>
-            <div>{selectedMarker.lastTimeSeen}</div>
-          </div>
-          </div>
-
+            <div>{searchUpdate.lastTimeSeen}</div>
+          </Grid>
+        </Grid>
         </Box>
 
         </div>

@@ -61,11 +61,12 @@ const Map = (props) => {
       markers.forEach((marker) => {
         let mark = new maps.Marker({
           position: { lat: parseFloat(marker.lat), lng: parseFloat(marker.lon) },
-          title: marker.name,
+          title: `${ marker.name } : ${marker.mac_address}`,
           name: marker.name,
           map,
           key: marker._id
         });
+        console.log(mark)
         return mark;
       });
     }
@@ -87,7 +88,7 @@ const Map = (props) => {
   const onMapClick = (marker) => {
     let count = 0;
     let nameChecker
-
+    console.log("TEST", $(marker.event.target).closest('div'));
     if ($(marker.event.target).closest('div').attr('title') === undefined) {
       // FOR BRAVE
       nameChecker = marker.event.target.title
@@ -96,9 +97,13 @@ const Map = (props) => {
       nameChecker = $(marker.event.target).closest('div').attr('title');
       // FOR EDGE
     }
+    const regex = new RegExp('\\s:\\s');
+    const macAddress = nameChecker.split(regex);
+    console.log("🚀 ~ file: Map.jsx ~ line 104 ~ onMapClick ~ macAddress", macAddress[1])
 
     for (let i = 0; i < markers.length; i++) {
-      if (nameChecker === markers[i].name && count === 0) {
+      console.log(markers[i].mac_address)
+      if (String(macAddress[1]) === String(markers[i].mac_address) && count === 0) {
         // Check if the security filter is on
         if (props.checkSecurity === markers[i].encryption && props.checkSecurity !== "All") {
           count++;
