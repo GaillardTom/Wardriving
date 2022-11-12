@@ -18,11 +18,13 @@ export default makeStyles((theme) => ({
     marginBottom: '30px',
     
   },
-  closeIcon: {
-    
+  closeIcon: { 
     padding: '5px',
     cursor: 'pointer',
-    
+    justifyContent: 'right',
+    marginLeft: '95%',
+    '&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.08)' },
+
   },
   list: {
     height: '75vh', overflow: 'auto',
