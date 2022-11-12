@@ -6,6 +6,11 @@ import List from "./components/List/List";
 import Map from "./components/Map/Map";
 import NetworkDetails from "./components/NetworkDetails/NetworkDetails";
 import Footer from "./components/Footer/Footer";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const App = () => {
 
@@ -92,7 +97,9 @@ const App = () => {
                     <Map updateMarker={handleMarkerChange} searchState={UpdateBooly} setList={handleListChange} checkSecurityBool={securityBool} listDetails={secuList} checkSecurity={security} displayDetailsBool={handleDisplayDetailsChange} searchUpdate={updateMarker}/>
                 </Grid>
             </Grid>
-           
+            <ToastContainer />
+
+
         </>
     );
 };

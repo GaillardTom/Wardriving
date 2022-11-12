@@ -7,6 +7,11 @@ import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 import useStyles from './styles';
 import IconButton from '@mui/material/IconButton';
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 
 const Header = (props) => {
 
@@ -52,7 +57,10 @@ const Header = (props) => {
         }).catch((error) => {
             console.log(error);
             if (error.response.status === 401) {
-                alert("No results found");
+                toast.error("No results found", {
+                    position: toast.POSITION.BOTTOM_RIGHT,
+                    autoClose: 2000,
+                });
             }
         })
     }
@@ -67,7 +75,10 @@ const Header = (props) => {
             props.displayDetailsBool(true);
         }
         else {
-            alert("Please enter information to search");
+            toast.warning("Please enter information to search", { 
+                position: toast.POSITION.BOTTOM_RIGHT,
+                autoClose: 2000,
+            });
         }
     }
 

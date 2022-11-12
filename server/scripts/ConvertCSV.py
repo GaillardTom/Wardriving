@@ -60,9 +60,9 @@ def CheckForDuplicates(df):
                     print('element', idx,  element['lon'])
                     isSamePlace = CheckDist(element['lon'], element['lat'], df.loc[df['mac_address'] == mac]['lon'], df.loc[df['mac_address'] == mac]['lat'])
                     if(isSamePlace == True):
-                        print("Not duplicate")
-                        """
-                    elif(isSamePlace == False and element['lastTimeSeen']  <= df.loc[df['mac_address'] == mac]['lastTimeSeen']):
+                        print("Not duplicate")       
+                        """                 
+                    elif(isSamePlace == False and element['lastTimeSeen'] <= df.loc[df['mac_address'] == mac]['lastTimeSeen']):
                         print("Duplicate")
                         df.drop(df.loc[df['mac_address'] == mac].index, inplace=True)
                         print(df)
@@ -70,7 +70,17 @@ def CheckForDuplicates(df):
                     else:
                         print("Duplicate")
                         csvCollection.delete_one({'_id': element['_id']})
-        
+    for idx, element in df.iterrows():
+        for ind, ele in df.iterrows():
+            if(idx != ind): 
+                isSamePlace = CheckDist(element['lon'], element['lat'], ele['lon'], ele['lat'])
+                if(isSamePlace != True):
+                    if(element['mac_address'] == ele['mac_address'] and element['lastTimeSeen'] <= ele['lastTimeSeen']):
+                        print("Duplicate", element['mac_address'], ele['mac_address'])
+                        df.drop(ind, inplace=True)
+                        #print(df)
+    #After all check we insert the data into the database
+    InsertToDB(df)
 
 
 
@@ -79,7 +89,7 @@ def main():
     csvDF = pd.read_csv(f'{sys.argv[1]}', delimiter=',')
     print(csvDF)
     CheckForDuplicates(csvDF)
-    InsertToDB(csvDF)
+    #InsertToDB(csvDF)
 
 
 def InsertToDB(dataFrame):
