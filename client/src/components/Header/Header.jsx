@@ -46,7 +46,7 @@ const Header = (props) => {
 
         axios.get('http://localhost:8080/search' + values).then((response) => {
             setMarker(response.data);
-           // Location(response.data.lat, response.data.lon);
+            // Location(response.data.lat, response.data.lon);
             props.searchUpdate(response.data);
             props.searchState(true);
         }).catch((error) => {
@@ -62,8 +62,8 @@ const Header = (props) => {
 
             // Call the get from database function to get the network details from the database
             GetFromDb(info);
-            
-           // Location(info.lat, info.lng);
+
+            // Location(info.lat, info.lng);
             props.displayDetailsBool(true);
         }
         else {
@@ -78,11 +78,11 @@ const Header = (props) => {
 
     const Naviguater = () => {
         //Naviguate to homepage
-       window.location.href = "http://localhost:3000/";
+        window.location.href = "http://localhost:3000/";
     }
 
     const handleKeyPress = (event) => {
-        if (event.key === 'Enter') {    
+        if (event.key === 'Enter') {
             // Call the search method 
             Search();
         }
@@ -96,24 +96,26 @@ const Header = (props) => {
                 <Typography variant="h5" className={classes.title} onClick={Naviguater} >
                     Wardriving Mapper
                 </Typography>
-                <Box className={classes.subtitle} display="flex">
-                    <Typography variant="h5" className={classes.subtitle} >
-                        Search a Place
-                    </Typography>
-                </Box>
+
+               
+              
+             
+              
                 <div className={classes.search}>
+                    <h3>Search a place</h3>
                     <FormControl className={classes.FormControl}>
                         <InputLabel>Search By</InputLabel>
-                        <Select onChange={(e) => SearchBy(e)}>
+                        <Select className={classes.dropdown} onChange={(e) => SearchBy(e)}>
                             <MenuItem value="Name">Name</MenuItem>
                             <MenuItem value="MAC">MAC</MenuItem>
                         </Select>
                     </FormControl>
-                    <InputBase className="search-bar" classes={{ root: classes.inputRoot, input: classes.inputInput }} onChange={(e) => getInfo(e.target.value)} onKeyDown={(e) => handleKeyPress(e)}/>
-                </div>
+                    <InputBase className="search-bar" classes={{ root: classes.inputRoot, input: classes.inputInput }} onChange={(e) => getInfo(e.target.value)} onKeyDown={(e) => handleKeyPress(e)} />
+                    
                 <IconButton size="large" aria-label="search" color="inherit" onClick={Search} >
                     <SearchIcon />
                 </IconButton>
+                </div>
             </Toolbar>
         </ AppBar>
     );
