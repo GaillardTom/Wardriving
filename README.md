@@ -14,6 +14,7 @@ the website to create new markers with the networks that were added.
 ## Installation
 ****
 **SERVER SIDE**
+****
 > cd Wardriving/server/
 ****
 > npm install
@@ -21,6 +22,7 @@ the website to create new markers with the networks that were added.
 > npm start
 ****
 **CLIENT SIDE**
+****
 > cd Wardriving/client/
 ****
 > npm install
