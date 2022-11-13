@@ -46,21 +46,22 @@ const NetworkDetails = (props) => {
         <div className={classes.container}>
         <Box>
         <CloseIcon onClick={CloseWindow} className={classes.closeIcon} />
-        <h2>Network Details</h2>
-        <Grid container spacing={1} >
-          <Grid container item xs={5} direction="column" >
-            <h3>Network Name:</h3>
-            <div>{searchUpdate.name}</div>
-            <h3>Mac Address</h3>
-            <div>{searchUpdate.mac_address}</div>
-            <h3>WPA Version</h3>
-            <div>{searchUpdate.wpaVersion}</div>
-            <h3>Encryption</h3>
-            <div>{searchUpdate.encryption}</div>
-            <h3>Latitude</h3>
-            <div>{searchUpdate.lat}</div>
+          <h2>Network Details</h2>
+          <Grid container spacing={1} >
+            <Grid container item xs={5} direction="column" >
+              <h3>Network Name:</h3>
+              <div>{searchUpdate.name}</div>
+              <h3>Mac Address</h3>
+              <div>{searchUpdate.mac_address}</div>
+              <h3>WPA Version</h3>
+              <div>{searchUpdate.wpaVersion}</div>
+              <h3>Encryption</h3>
+              <div>{searchUpdate.encryption}</div>
+              <h3>Latitude</h3>
+              <div>{searchUpdate.lat}</div>
+              <h3>Longitude</h3>
+              <div>{searchUpdate.lon}</div>
             
-
           </Grid>
           <Grid container item xs={5} direction="column" >
             <h3>Packets</h3>
@@ -71,8 +72,6 @@ const NetworkDetails = (props) => {
             <div>{searchUpdate.firstTimeSeen}</div>
             <h3>Last Time Seen</h3>
             <div>{searchUpdate.lastTimeSeen}</div>
-            <h3>Longitude</h3>
-            <div>{searchUpdate.lon}</div>
           </Grid>
         </Grid>
         </Box>
