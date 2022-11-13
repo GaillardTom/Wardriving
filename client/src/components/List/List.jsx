@@ -24,6 +24,9 @@ const List = (props) => {
             // Add the list to the state
             props.setSecuList(secuList);
 
+            // Set the display details to false
+            props.displayDetailsBool(false)
+            
             // Modify the security state
             props.security(tp)
         }

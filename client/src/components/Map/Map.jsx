@@ -57,6 +57,10 @@ const Map = (props) => {
   }, []);
 
   const renderMarks = (map, maps) => {
+    console.log("renderMarks", props.checkSecurity);
+    console.log("renderMarks", props.displayDetails);
+    if (props.displayDetails === false) 
+    {
     if (secu === false || props.checkSecurity === "All") {
       markers.forEach((marker) => {
         let mark = new maps.Marker({
@@ -69,8 +73,9 @@ const Map = (props) => {
         return mark;
       });
     }
-    else {
 
+    else {
+     
       secuList.forEach((marker) => {
         let mark = new maps.Marker({
           position: { lat: parseFloat(marker.lat), lng: parseFloat(marker.lon) },
@@ -82,6 +87,21 @@ const Map = (props) => {
         return mark;
       });
     }
+  }
+  else if (props.checkSecurity === "Search")
+  {
+    console.log("Security");
+    // Only render the marker of the network the user is searching for
+    let mark = new maps.Marker({
+      position: { lat: parseFloat(props.searchUpdate.lat), lng: parseFloat(props.searchUpdate.lon) },
+      title: props.searchUpdate.name,
+      name: props.searchUpdate.name,
+      map,
+      key: props.searchUpdate._id
+    });
+    return mark;
+
+  }
   }
 
   const onMapClick = (marker) => {
@@ -96,7 +116,8 @@ const Map = (props) => {
       nameChecker = $(marker.event.target).closest('div').attr('title');
       // FOR EDGE
     }
-
+    props.displayDetailsBool(false)
+   console.log("nameChecker", props.checkSecurity);
     for (let i = 0; i < markers.length; i++) {
       if (nameChecker === markers[i].name && count === 0) {
         // Check if the security filter is on
@@ -108,6 +129,13 @@ const Map = (props) => {
         }
         // The security filter is off
         else if (props.checkSecurity === "All") {
+          console.log("test")
+          count++;
+          props.searchState(false);
+          props.updateMarker(markers[i])
+          props.displayDetailsBool(true)
+        }
+        else {
           count++;
           props.searchState(false);
           props.updateMarker(markers[i])

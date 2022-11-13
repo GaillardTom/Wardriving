@@ -44,12 +44,11 @@ const NetworkDetails = (props) => {
     if (searchState === true) {
       return (
         <div className={classes.container}>
-        <Box className={classes.box}>
+        <Box>
         <CloseIcon onClick={CloseWindow} className={classes.closeIcon} />
-          <h2>Network Details</h2>
-          <div className="row">
-
-          <div className="column">
+        <h2>Network Details</h2>
+        <Grid container spacing={1} >
+          <Grid container item xs={5} direction="column" >
             <h3>Network Name:</h3>
             <div>{searchUpdate.name}</div>
             <h3>Mac Address</h3>
@@ -60,24 +59,24 @@ const NetworkDetails = (props) => {
             <div>{searchUpdate.encryption}</div>
             <h3>Latitude</h3>
             <div>{searchUpdate.lat}</div>
+            
+
+          </Grid>
+          <Grid container item xs={5} direction="column" >
+            <h3>Packets</h3>
+            <div>{searchUpdate.nbPackets}</div>
+            <h3>Data Size</h3>
+            <div>{searchUpdate.dataSize}</div>
+            <h3>First Time Seen</h3>
+            <div>{searchUpdate.firstTimeSeen}</div>
+            <h3>Last Time Seen</h3>
+            <div>{searchUpdate.lastTimeSeen}</div>
             <h3>Longitude</h3>
             <div>{searchUpdate.lon}</div>
-          </div>
-          <div className="column">
-            <h3>Packets</h3>
-            <div>{selectedMarker.nbPackets}</div>
-            <h3>Data Size</h3>
-            <div>{selectedMarker.dataSize}</div>
-            <h3>First Time Seen</h3>
-            <div>{selectedMarker.firstTimeSeen}</div>
-            <h3>Last Time Seen</h3>
-            <div>{selectedMarker.lastTimeSeen}</div>
-          </div>
-          </div>
-
+          </Grid>
+        </Grid>
         </Box>
-
-        </div>
+      </div>
       
       )
     }

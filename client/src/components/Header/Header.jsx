@@ -73,6 +73,8 @@ const Header = (props) => {
 
             // Location(info.lat, info.lng);
             props.displayDetailsBool(true);
+
+            props.security('Search')
         }
         else {
             toast.warning("Please enter information to search", { 
@@ -115,7 +117,7 @@ const Header = (props) => {
                 <div className={classes.search}>
                     <h3>Search a place</h3>
                     <FormControl className={classes.FormControl}>
-                        <InputLabel>Search By</InputLabel>
+                        <InputLabel className={classes.menuText}>By</InputLabel>
                         <Select className={classes.dropdown} onChange={(e) => SearchBy(e)}>
                             <MenuItem value="Name">Name</MenuItem>
                             <MenuItem value="MAC">MAC</MenuItem>
