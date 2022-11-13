@@ -13,12 +13,18 @@ the website to create new markers with the networks that were added.
 
 ## Installation
 ****
+**SERVER SIDE**
 > cd Wardriving/server/
+****
 > npm install
+****
 > npm start
 ****
+**CLIENT SIDE**
 > cd Wardriving/client/
+****
 > npm install
+****
 npm start
 ****
 
