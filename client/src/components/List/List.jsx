@@ -8,8 +8,10 @@ const List = (props) => {
     const secuList = []
 
     useState(() => {
+        // Assign default state
         props.security("All");
     }, []);
+    
     const GetWifiByConstraint = (tp) => {
 
         if (!(tp === "All")) {
@@ -23,6 +25,9 @@ const List = (props) => {
             }
             // Add the list to the state
             props.setSecuList(secuList);
+
+            // Set the display details to false
+            props.displayDetailsBool(false)
 
             // Modify the security state
             props.security(tp)
@@ -41,7 +46,7 @@ const List = (props) => {
             <Typography variant="h4"> Networks Around You </Typography>
             <InputLabel>Filter by Security</InputLabel>
             <FormControl className={classes.FormControl}>
-                <Select  onChange={(e) => GetWifiByConstraint(e.target.value)}> 
+                <Select defaultValue="All" onChange={(e) => GetWifiByConstraint(e.target.value)}> 
                     <MenuItem value="None">None</MenuItem>
                     <MenuItem value="WPA+AES-CCM WPA+PSK">WPA+AES-CCM WPA+PSK</MenuItem>
                     <MenuItem value="WPA+AES-CCM WPA+PSK WPA+TKIP">WPA+AES-CCM WPA+PSK WPA+TKIP</MenuItem>

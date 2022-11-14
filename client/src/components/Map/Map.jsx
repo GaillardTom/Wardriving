@@ -57,6 +57,9 @@ const Map = (props) => {
   }, []);
 
   const renderMarks = (map, maps) => {
+    if (props.displayDetails === false) 
+    {
+    console.log(props.checkSecurity)
     if (secu === false || props.checkSecurity === "All") {
       markers.forEach((marker) => {
         let mark = new maps.Marker({
@@ -66,12 +69,12 @@ const Map = (props) => {
           map,
           key: marker._id
         });
-        console.log(mark)
         return mark;
       });
     }
-    else {
 
+    else {
+     
       secuList.forEach((marker) => {
         let mark = new maps.Marker({
           position: { lat: parseFloat(marker.lat), lng: parseFloat(marker.lon) },
@@ -84,11 +87,23 @@ const Map = (props) => {
       });
     }
   }
+  else if (props.checkSecurity === "Search")
+  {
+    // Only render the marker of the network the user is searching for
+    let mark = new maps.Marker({
+      position: { lat: parseFloat(props.searchUpdate.lat), lng: parseFloat(props.searchUpdate.lon) },
+      title: `${ props.searchUpdate.name } : ${props.searchUpdate.mac_address}`,
+      name: props.searchUpdate.name,
+      map,
+      key: props.searchUpdate._id
+    });
+    return mark;
+
+  }
+  }
 
   const onMapClick = (marker) => {
-    let count = 0;
     let nameChecker
-    console.log("TEST", $(marker.event.target).closest('div'));
     if ($(marker.event.target).closest('div').attr('title') === undefined) {
       // FOR BRAVE
       nameChecker = marker.event.target.title
@@ -99,7 +114,6 @@ const Map = (props) => {
     }
     const regex = new RegExp('\\s:\\s');
     const macAddress = nameChecker.split(regex);
-    console.log("🚀 ~ file: Map.jsx ~ line 104 ~ onMapClick ~ macAddress", macAddress[1])
 
     for (let i = 0; i < markers.length; i++) {
       console.log(markers[i].mac_address)
@@ -109,14 +123,12 @@ const Map = (props) => {
         // Check if the security filter is on
         console.log("test")
         if (props.checkSecurity === markers[i].encryption && props.checkSecurity !== "All") {
-          count++;
           props.searchState(false);
           props.updateMarker(markers[i])
           props.displayDetailsBool(true)
         }
-        // The security filter is off
-        else if (props.checkSecurity === "All") {
-          count++;
+       
+        else {
           props.searchState(false);
           props.updateMarker(markers[i])
           props.displayDetailsBool(true)

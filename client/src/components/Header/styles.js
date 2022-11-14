@@ -68,4 +68,14 @@ export default makeStyles((theme) => ({
       searchTitle:{
         
       },
+      menuText: {
+        textAlign: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        "min-height": '50px',
+        "min-width": '100px',
+        "max-height": '50px',
+        
+      },
 }))

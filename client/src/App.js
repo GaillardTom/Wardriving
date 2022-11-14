@@ -27,8 +27,8 @@ const App = () => {
     // Display the network details?
     const [displayDetails, setDisplayDetails] = useState(false);
 
-        // Return coordinates of the researched location
-        const [location, setLocation] = useState({});
+    // Return coordinates of the researched location
+    const [location, setLocation] = useState({});
 
 
     const UpdateBooly = (booly) => {
@@ -81,25 +81,18 @@ const App = () => {
     return (
         <>
             <CssBaseline />
-            <Header searchUpdate={handleSearchMarker} searchState={UpdateBooly} setSecurityBool={handleSecurityBoolChange} displayDetailsBool={handleDisplayDetailsChange}/>
-          
+            <Header searchUpdate={handleSearchMarker} searchState={UpdateBooly} setSecurityBool={handleSecurityBoolChange} displayDetailsBool={handleDisplayDetailsChange} security={handleSecurityChange} />
             <Grid container spacing={3} style={{ width: '100%' }}>
-           
                 <Grid item xs={12} md={4}>
-              
-                    <List listDetails={list} setSecuList={handleSecuListChange} setSecurityBool={handleSecurityBoolChange} checkSecurityBool={securityBool} security={handleSecurityChange}/>
+                    <List listDetails={list} setSecuList={handleSecuListChange} setSecurityBool={handleSecurityBoolChange} checkSecurityBool={securityBool} security={handleSecurityChange} displayDetailsBool={handleDisplayDetailsChange} />
                     <Footer />
-                    <NetworkDetails selectedMarker={marker} searchUpdate={updateMarker} searchState={booly} displayDetails={displayDetails} displayDetailsBool={handleDisplayDetailsChange}/>
+                    <NetworkDetails selectedMarker={marker} searchUpdate={updateMarker} searchState={booly} displayDetails={displayDetails} displayDetailsBool={handleDisplayDetailsChange} />
                 </Grid>
-                
                 <Grid item xs={12} md={8}>
-               
-                    <Map updateMarker={handleMarkerChange} searchState={UpdateBooly} setList={handleListChange} checkSecurityBool={securityBool} listDetails={secuList} checkSecurity={security} displayDetailsBool={handleDisplayDetailsChange} searchUpdate={updateMarker}/>
+                    <Map updateMarker={handleMarkerChange} searchState={UpdateBooly} setList={handleListChange} checkSecurityBool={securityBool} listDetails={secuList} checkSecurity={security} displayDetailsBool={handleDisplayDetailsChange} searchUpdate={updateMarker} displayDetails={displayDetails} />
                 </Grid>
             </Grid>
             <ToastContainer />
-
-
         </>
     );
 };

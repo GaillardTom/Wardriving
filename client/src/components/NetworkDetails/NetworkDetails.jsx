@@ -44,7 +44,7 @@ const NetworkDetails = (props) => {
     if (searchState === true) {
       return (
         <div className={classes.container}>
-        <Box className={classes.box}>
+        <Box>
         <CloseIcon onClick={CloseWindow} className={classes.closeIcon} />
           <h2>Network Details</h2>
           <Grid container spacing={5} >
@@ -75,8 +75,7 @@ const NetworkDetails = (props) => {
           </Grid>
         </Grid>
         </Box>
-
-        </div>
+      </div>
       
       )
     }
