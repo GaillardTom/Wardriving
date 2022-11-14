@@ -47,8 +47,8 @@ const NetworkDetails = (props) => {
         <Box className={classes.box}>
         <CloseIcon onClick={CloseWindow} className={classes.closeIcon} />
           <h2>Network Details</h2>
-          <Grid container spacing={1} >
-            <Grid container item xs={5} direction="column" >
+          <Grid container spacing={5} >
+            <Grid container item xs={8} direction="column" >
               <h3>Network Name:</h3>
               <div>{searchUpdate.name}</div>
               <h3>Mac Address</h3>
@@ -63,7 +63,7 @@ const NetworkDetails = (props) => {
               <div>{searchUpdate.lon}</div>
             
           </Grid>
-          <Grid container item xs={5} direction="column" >
+          <Grid container item xs={8} direction="column" >
             <h3>Packets</h3>
             <div>{searchUpdate.nbPackets}</div>
             <h3>Data Size</h3>
@@ -88,7 +88,7 @@ const NetworkDetails = (props) => {
           <CloseIcon onClick={CloseWindow} className={classes.closeIcon} />
           <h2>Network Details</h2>
           <Grid container spacing={1} >
-            <Grid container item xs={5} direction="column" >
+            <Grid container item xs={7} direction="column" >
               <h3>Network Name:</h3>
               <div>{selectedMarker.name}</div>
               <h3>Mac Address</h3>

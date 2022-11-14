@@ -75,7 +75,7 @@ const Map = (props) => {
       secuList.forEach((marker) => {
         let mark = new maps.Marker({
           position: { lat: parseFloat(marker.lat), lng: parseFloat(marker.lon) },
-          title: marker.name,
+          title: `${ marker.name } : ${marker.mac_address}`,
           name: marker.name,
           map,
           key: marker._id
@@ -103,8 +103,11 @@ const Map = (props) => {
 
     for (let i = 0; i < markers.length; i++) {
       console.log(markers[i].mac_address)
-      if (String(macAddress[1]) === String(markers[i].mac_address) && count === 0) {
+      console.log("Correct MAC: ", macAddress[1])
+      console.log(count)
+      if (String(macAddress[1]).trim() === String(markers[i].mac_address) && count === 0) {
         // Check if the security filter is on
+        console.log("test")
         if (props.checkSecurity === markers[i].encryption && props.checkSecurity !== "All") {
           count++;
           props.searchState(false);
