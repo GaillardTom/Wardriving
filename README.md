@@ -27,7 +27,7 @@ the website to create new markers with the networks that were added.
 ****
 > npm install
 ****
-npm start
+> npm start
 ****
 
 ## Contributors
