@@ -20,10 +20,11 @@ if __name__ == '__main__':
 
     # Open csv file (or create it if not exist)
     outfile = open(outputFilename, "w")
-
+    clientFileName = outputFilename.replace(".csv", "") + "_clients.csv"
+    clientOutFile = open(f"{clientFileName}", "w")
     # Create columns in csv
     outfile.write("name,mac_address,encryption,wpaVersion,nbPackets,dataSize,lat,lon,firstTimeSeen,lastTimeSeen")
-
+    clientOutFile.write("mac_client,packetsNb_client,encoding_client,number_client,channel_client,carrier_client,datasize_client,encrypted_clients_packets,client_type,connected_network")
     # For each network
     for child in root:
         if child.tag == "wireless-network":
@@ -39,8 +40,19 @@ if __name__ == '__main__':
             firstTimeSeen = child.attrib['first-time']
             lastTimeSeen = child.attrib['last-time']
 
-            
+            ### FOR CLIENTS ###
 
+
+            mac_client = ""
+            packetsNb_client = "None"
+            encoding_client = ""
+            number_client = "None" 
+            channel_client = "None"
+            carrier_client = "None"
+            datasize_client = "None"
+            encrypted_packets_client = "None"
+            connected_network = "None"
+            client_type = "None"
             # Parse each network
             for element in child:
 
@@ -60,6 +72,8 @@ if __name__ == '__main__':
                 # Get MAC Address
                 if element.tag == "BSSID":
                     bssid = str(element.text)
+                    print("BSSID Connected NEtworK: " + bssid)
+                    connected_network = bssid
 
                 # Get GPS informations
                 if element.tag == "gps-info":
@@ -75,10 +89,37 @@ if __name__ == '__main__':
                 if element.tag == "datasize":
                     print("DataSize: ", element.text)
                     dataSize = str(element.text)
+            
+                if element.tag == "wireless-client":
+                    #print("Number Client", element.attrib['number'])
+                    number_client = str(element.attrib['number'])
+                    client_type = str(element.attrib['type'])
+                    for subelement in element: 
+                        print(subelement.tag, subelement.text)
+                        if(subelement.tag == "client-mac"): 
+                            mac_client = str(subelement.text)
+                        if(subelement.tag == "packets"):
+                            for subsubelement in subelement: 
+                                if(subsubelement.tag == "crypt"):
+                                    encrypted_packets_client = str(subsubelement.text)
+                                if(subsubelement.tag == "total"):
+                                    packetsNb_client = str(subsubelement.text)
+                        if(subelement.tag == "datasize"): 
+                            datasize_client = str(subelement.text)
+                        if(subelement.tag == "encoding"):
+                            encoding_client = str(subelement.text)
+                        if(subelement.tag == "channel"):
+                            channel_client = str(subelement.text)
+                        if(subelement.tag == "carrier"):
+                            carrier_client = str(subelement.text)
+                    if(mac_client != "" and connected_network != "None"):
+                        print("Connected Network wrote to file: " + connected_network)
+                        clientOutFile.write(f"\n{mac_client},{packetsNb_client},{encoding_client},{number_client},{channel_client},{carrier_client},{datasize_client},{encrypted_packets_client},{client_type},{connected_network}")    
+                        
+                    print("Wireless-Client", element.text)
 
 
                 encryption.sort()
-
             # Store network to csv file
             # If MODE is not specified
             if mode == "" and essid != "":

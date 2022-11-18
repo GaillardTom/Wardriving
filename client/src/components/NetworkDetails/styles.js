@@ -39,7 +39,11 @@ export default makeStyles((theme) => ({
     content: "",
     display: 'table',
     clear: 'both'
+  },
+  clientButton: { 
+    marginRight: '10px',
+    marginLeft: '50%',
   }
-
+  
 
 }));

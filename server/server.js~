@@ -5,7 +5,7 @@ const multer = require('multer');
 const csvJson = require('csvtojson');
 const { rm } = require('fs/promises');
 const spawn = require('await-spawn')
-const { connectCallBack, UploadCsvToDB, UploadWigleToDB, GetDevicesByMACFromDB, GetAllDeviceForMap, UploadNetxmlCSVToDB, GetAllLocationsForMap, WriteJSONFile, GetDevicesByMac } = require('./database');
+const { connectCallBack, UploadCsvToDB, UploadWigleToDB, GetDevicesByMACFromDB, GetAllDeviceForMap, UploadNetxmlCSVToDB, GetAllLocationsForMap, WriteJSONFile } = require('./database');
 const searchRoutes = require('./routes/search');
 //const { connectCallback, CreateUser, Connect, connectToUsersDB, GetAllLocations} = require('./database');
 //var jwt = require('jsonwebtoken');
@@ -16,7 +16,6 @@ var morgan = require('morgan');
 const bodyParser = require('body-parser');
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
 //const graphRoute = require('./graph_routes/graph_routes')
 const path = require('path');
 const { delimiter } = require('path');
@@ -62,7 +61,6 @@ app.post('/csv', upload.single('wigle'), async function(req, res){
         }
     }
 });
-/* A post request that is uploading a file to the server. */
 app.post('/upload', upload.single('data'), async function (req, res) {
     if(req.file){
         console.log(req.file);
@@ -86,10 +84,6 @@ app.post('/upload', upload.single('data'), async function (req, res) {
             console.log("done converting to json", python);
             const ans = await UploadNetxmlCSVToDB(".\\"+ req.file.path.replace('.netxml', '.csv'));
             if(ans){ 
-                rm("./" + req.file.path);
-                rm("./" + req.file.path.replace('.netxml', '.csv'));
-                rm("./" + req.file.path.replace('.netxml', '_clients.csv'));
-
                 res.send({
                     path: req.file.path.replace('.netxml', '.csv'),
                 })
@@ -97,23 +91,16 @@ app.post('/upload', upload.single('data'), async function (req, res) {
             }
             else{ 
                 res.status(304).send("File Not uploaded to DB");
-                // rm("./" + req.file.path);
-                // rm("./" + req.file.path.replace('.netxml', '.csv'));
-                // rm("./" + req.file.path.replace('.netxml', '_clients.csv'));
             }
 
             //await collection.insertMany(document) or sum 
-            // rm("./" + req.file.path);
-            // rm("./" + req.file.path.replace('.netxml', '.csv'));
-            // rm("./" + req.file.path.replace('.netxml', '_clients.csv'));
+            rm("./" + req.file.path);
             
 
         
         }
         else{ 
-            // rm("./" + req.file.path);
-            // rm("./" + req.file.path.replace('.netxml', '.csv'));
-            // rm("./" + req.file.path.replace('.netxml', '_clients.csv'));
+            rm("./" + req.file.path);
     
             res.send("Wrong extension or no name for the file").status(406);
         }
@@ -127,25 +114,6 @@ app.post('/upload', upload.single('data'), async function (req, res) {
 
 
 });
-app.get('/devices', async (req, res) => {
-    console.log(req.body.mac)
-    if(req.body.mac){ 
-
-        const mac = req.body.mac;
-        const devices = await GetDevicesByMac(mac);
-        console.log('devices:', devices)
-        if(devices != []){
-            res.send(devices).status(200);
-        }else{ 
-            res.status(404).send("No devices found");
-        }
-
-    }else{ 
-        res.status(401).send("No MAC provided");
-    }
-
-});
-/* A get request that is getting all the devices from the database. */
 app.get('/map', async(req, res) =>{ 
     try{ 
         const aps = await GetAllDeviceForMap();
@@ -156,9 +124,8 @@ app.get('/map', async(req, res) =>{
         res.status(402).send("Couldn't Get Map");
     }
 })
-/* This is a get request that is getting the devices from the database corresponding to the mac_address given in the url parameter. */
 app.get('/devices/:mac', async(req,res)=> { 
-    console.log("mac: ", req.body.mac);
+
     const mac = req.params.mac
     console.log(mac)
     const ans = await GetDevicesByMACFromDB(mac);

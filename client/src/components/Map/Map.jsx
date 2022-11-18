@@ -49,6 +49,9 @@ const Map = (props) => {
     }
   }
 
+  
+  
+  
   useEffect(() => {
     fetchData().then((data) => {
       setMarkers(data);
@@ -118,8 +121,8 @@ const Map = (props) => {
     for (let i = 0; i < markers.length; i++) {
       console.log(markers[i].mac_address)
       console.log("Correct MAC: ", macAddress[1])
-      console.log(count)
-      if (String(macAddress[1]).trim() === String(markers[i].mac_address) && count === 0) {
+      
+      if (String(macAddress[1]).trim() === String(markers[i].mac_address)) {
         // Check if the security filter is on
         console.log("test")
         if (props.checkSecurity === markers[i].encryption && props.checkSecurity !== "All") {

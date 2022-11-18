@@ -2,7 +2,7 @@ import React, { Component, useEffect, useState } from "react";
  import CloseIcon from '@material-ui/icons/Close';
  import Box from '@material-ui/core/Box';
  import Grid from '@material-ui/core/Grid'
-
+import Button from "@material-ui/core/Button";
 import useStyles from './styles';
 //import Marker from './Map/Map'
 //import Map from './Map/Map'
@@ -14,7 +14,7 @@ const NetworkDetails = (props) => {
   const searchUpdate = props.searchUpdate;
   const searchState = props.searchState;
   const [markers, setMarkers] = useState([]);
-
+  const [clicked, setClicked] = useState(false);
   
   const fetchData = async () => {
     // Fetch all wifi networks from the database
@@ -30,6 +30,7 @@ const NetworkDetails = (props) => {
 
   useEffect(() => {
     fetchData()
+    
   }, []);
 
   const CloseWindow = () => {
@@ -74,6 +75,9 @@ const NetworkDetails = (props) => {
             <div>{searchUpdate.lastTimeSeen}</div>
           </Grid>
         </Grid>
+        <div className={classes.clientButton}>
+        <Button variant="contained" color="success" onClick={() => { setClicked(!clicked);}}>Show Clients</Button>
+        </div>
         </Box>
       </div>
       
@@ -114,6 +118,10 @@ const NetworkDetails = (props) => {
               <div>{selectedMarker.lon}</div>
             </Grid>
           </Grid>
+          <Button className="clients-btn" variant="contained" color="secondary">
+            Show Clients
+          </Button>
+
           </Box>
         </div>
       )

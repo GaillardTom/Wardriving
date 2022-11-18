@@ -142,6 +142,12 @@ function GetByEncryptionFromDB(Encryption) {
     const device = collection.findOne({ encryption: Encryption });
     return device;
 }
+async function GetDevicesByMac(mac){ 
+    const deviceCollection = warDB.collection('clientCollection');
+    const devices = await deviceCollection.find({"connected_network": String(mac)}).toArray();
+    console.log(devices)
+    return devices;
+}
 
 module.exports = {
     connectCallBack: connectToUsersDB,
@@ -153,6 +159,7 @@ module.exports = {
     GetByNameFromDB,
     GetByMacFromDB,
     GetByWpaFromDB,
-    GetByEncryptionFromDB
+    GetByEncryptionFromDB,
+    GetDevicesByMac
 
 }
