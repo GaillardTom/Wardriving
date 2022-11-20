@@ -59,8 +59,7 @@ const NetworkDetails = (props) => {
               <div>{searchUpdate.encryption}</div>
               <h3>Latitude</h3>
               <div>{searchUpdate.lat}</div>
-              <h3>Longitude</h3>
-              <div>{searchUpdate.lon}</div>
+           
             
           </Grid>
           <Grid container item xs={5} direction="column" >
@@ -72,6 +71,8 @@ const NetworkDetails = (props) => {
             <div>{searchUpdate.firstTimeSeen}</div>
             <h3>Last Time Seen</h3>
             <div>{searchUpdate.lastTimeSeen}</div>
+            <h3>Longitude</h3>
+              <div>{searchUpdate.lon}</div>
           </Grid>
         </Grid>
         </Box>
