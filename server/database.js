@@ -1,24 +1,24 @@
-const { MongoClient, ObjectId } = require('mongodb');
-const spawn = require('await-spawn');
-const fs = require('fs');
+const { MongoClient, ObjectId } = require('mongodb')
+const spawn = require('await-spawn')
+const fs = require('fs')
 // Connection URL
-const wardriveurl = 'mongodb://localhost:27017';
-const wardriveClient = new MongoClient(wardriveurl);
+const wardriveurl = 'mongodb://localhost:27017'
+const wardriveClient = new MongoClient(wardriveurl)
 // Database
-let warDB = wardriveClient.db('WardrivingMapper');
+let warDB = wardriveClient.db('WardrivingMapper')
 
 async function connectToUsersDB(callback) {
-    try {
-        await wardriveClient.connect();
-        //usersDatabase = await usersDatabase.database(dbName);
-        console.log('Connected successfully to local users db');
-        callback();
-    } catch (err) {
-        console.error('Could not connect to local users db')
-        console.error(err);
-    }
+  try {
+    await wardriveClient.connect()
+    //usersDatabase = await usersDatabase.database(dbName);
+    console.log('Connected successfully to local users db')
+    callback()
+  } catch (err) {
+    console.error('Could not connect to local users db')
+    console.error(err)
+  }
 
-    return 'done.';
+  return 'done.'
 }
 /*
 async function UploadWigleToDB(capturesPath) {
@@ -44,122 +44,104 @@ async function UploadCsvToDB(devicesPath, packetsPath) {
 */
 
 async function UploadNetxmlCSVToDB(csvPath) {
-    console.log('csvPath: ', csvPath);
-    // /console.log("🚀 ~ file: database.js ~ line 31 ~ UploadCsvToDB ~ devicesPath", devicesPath)
+  try {
+    await spawn('python', ['./scripts/ConvertCSV.py', csvPath])
 
-    try {
-        await spawn("python", ["./scripts/ConvertCSV.py", csvPath]);
+    return true
+  } catch (err) {
+    console.log('err: ', err)
 
-        return true;
-
-    } catch (err) {
-        console.log('err: ', err);
-
-        return false;
-    }
+    return false
+  }
 }
-async function GetDevicesByMACFromDB(macAddress) {
 
-    const collection = warDB.collection('captures');
-    const devices = await collection.find({ MAC: macAddress }).toArray();
-    console.log('devices: ', devices);
-
-    if (devices) {
-        return devices;
-
-    }
-    else {
-        return false;
-    }
-}
 async function GetAllDeviceForMap() {
-    console.log('etst')
-    const collection = warDB.collection('captures');
-    console.log('etst')
+  const collection = warDB.collection('captures')
+  const aps = await collection
+    .find(
+      {},
+      {
+        projection: { MAC: 1, CurrentLatitude: 1, CurrentLongitude: 1, _id: 0 },
+      },
+    )
+    .limit(100)
+    .toArray()
 
-    const aps = await collection.find({}, {projection:{ MAC: 1, CurrentLatitude: 1, CurrentLongitude: 1,_id: 0}}).limit(100).toArray();
-    console.log('etst')
+  let apList = []
+  for (let i = 0; i < aps.length; i++) {
+    let length = apList.push(aps[i])
 
-    console.log('aps: ', aps);
-    let apList = [];
-    console.log(apList[0]);
-    console.log(aps.length);
-    for (let i = 0; i < aps.length; i++) {
-        
-        let length = apList.push(aps[i])
-        console.log('length: ', length);
-        for (var x = 0; x < apList.length; x++) {
-            console.log('apList: ', apList[0]);
-            if (aps[i].MAC == apList[x].MAC && aps[i].CurrentLatitude == apList[x].CurrentLatitude && aps[i].CurrentLongitude == apList[x].CurrentLongitude) {
-                if (aps[i].SSID == null) {
-                    apList.pop(i);
-                    apList.push(apList[x]);
-                }
-            } 
+    for (var x = 0; x < apList.length; x++) {
+      if (
+        aps[i].MAC == apList[x].MAC &&
+        aps[i].CurrentLatitude == apList[x].CurrentLatitude &&
+        aps[i].CurrentLongitude == apList[x].CurrentLongitude
+      ) {
+        if (aps[i].SSID == null) {
+          apList.pop(i)
+          apList.push(apList[x])
         }
+      }
     }
-    return apList;
-
+  }
+  return apList
 }
 async function GetAllLocationsForMap() {
-    const collection = warDB.collection('csvCollection');
-    const locations = await collection.find({}).toArray();
-   // console.log('locations: ', locations);
-    return locations;
+  const collection = warDB.collection('csvCollection')
+  const locations = await collection.find({}).toArray()
 
+  return locations
 }
 function WriteJSONFile(data, path) {
-
-    fs.writeFile('../locations.json', JSON.stringify(data), function (err) {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("The file was saved!");
-    });
+  fs.writeFile('../locations.json', JSON.stringify(data), function (err) {
+    if (err) {
+      return console.log(err)
+    }
+    console.log('The file was saved!')
+  })
 }
-   
+
 function GetByNameFromDB(SSID) {
-    const collection = warDB.collection('csvCollection');
-   
-    const device = collection.findOne({ name: SSID });
-    return device;
+  const collection = warDB.collection('csvCollection')
+
+  const device = collection.find({ name: SSID }).toArray()
+  return device
 }
 
 function GetByMacFromDB(MAC) {
-    const collection = warDB.collection('csvCollection');
-    const device = collection.findOne({ mac_address: MAC });
-    return device;
+  const collection = warDB.collection('csvCollection')
+  const device = collection.find({ mac_address: MAC }).toArray()
+  return device
 }
 
 function GetByWpaFromDB(WPA) {
-    const collection = warDB.collection('csvCollection');
-    const device = collection.findOne({ wpaVersion: WPA });
-    return device;
+  const collection = warDB.collection('csvCollection')
+  const device = collection.findOne({ wpaVersion: WPA })
+  return device
 }
 
 function GetByEncryptionFromDB(Encryption) {
-    const collection = warDB.collection('csvCollection');
-    const device = collection.findOne({ encryption: Encryption });
-    return device;
+  const collection = warDB.collection('csvCollection')
+  const device = collection.findOne({ encryption: Encryption })
+  return device
 }
-async function GetDevicesByMac(mac){ 
-    const deviceCollection = warDB.collection('clientCollection');
-    const devices = await deviceCollection.find({"connected_network": String(mac)}).toArray();
-    console.log(devices)
-    return devices;
+async function GetDevicesByMac(mac) {
+  const deviceCollection = warDB.collection('clientCollection')
+  const devices = await deviceCollection
+    .find({ connected_network: String(mac) })
+    .toArray()
+  return devices
 }
 
 module.exports = {
-    connectCallBack: connectToUsersDB,
-    GetDevicesByMACFromDB,
-    GetAllDeviceForMap,
-    UploadNetxmlCSVToDB,
-    GetAllLocationsForMap,
-    WriteJSONFile,
-    GetByNameFromDB,
-    GetByMacFromDB,
-    GetByWpaFromDB,
-    GetByEncryptionFromDB,
-    GetDevicesByMac
-
+  connectCallBack: connectToUsersDB,
+  GetAllDeviceForMap,
+  UploadNetxmlCSVToDB,
+  GetAllLocationsForMap,
+  WriteJSONFile,
+  GetByNameFromDB,
+  GetByMacFromDB,
+  GetByWpaFromDB,
+  GetByEncryptionFromDB,
+  GetDevicesByMac,
 }

@@ -17,7 +17,7 @@ const Header = (props) => {
 
     const [info, setInfo] = React.useState('');
     const [searchBy, setSearchBy] = React.useState('');
-    const [marker, setMarker] = useState({});
+    const [marker, setMarker] = useState([]);
 
     useState(() => {
         props.searchUpdate('test');
@@ -46,13 +46,18 @@ const Header = (props) => {
             values = '/encryption/' + infoString;
         }
 
+        // Get the data from the database
         axios.get('http://localhost:8080/search' + values).then((response) => {
             // set the marker to the response data
             setMarker(response.data);
+
+
             // Update the search info
             props.searchUpdate(response.data);
             // Display the network details
             props.searchState(true);
+            console.log('response', response.data);
+            console.log("salut", marker);
         }).catch((error) => {
             if (error.response.status === 401) {
                 // Display toast error message

@@ -6,6 +6,7 @@ import List from "./components/List/List";
 import Map from "./components/Map/Map";
 import NetworkDetails from "./components/NetworkDetails/NetworkDetails";
 import Footer from "./components/Footer/Footer";
+import Packets from "./components/Packets/Packets";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -15,7 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
 
     const [marker, setMarker] = useState({});
-    const [updateMarker, setUpdateMarker] = useState({});
+    const [updateMarker, setUpdateMarker] = useState([]);
     const [booly, setBooly] = useState(false);
     const [list, setList] = useState([]);
     const [secuList, setSecuList] = useState([]);
@@ -30,6 +31,9 @@ const App = () => {
     // Return coordinates of the researched location
     const [location, setLocation] = useState({});
 
+
+    // User clicked on show packets
+    const [showPackets, setShowPackets] = useState(false);
 
     const UpdateBooly = (booly) => {
         setBooly(booly);
@@ -78,15 +82,23 @@ const App = () => {
         setLocation({ lat: lat, lng: lon });
     }
 
+    const handleShowPacketsChange = (showPackets) => {
+        if (showPackets !== null) {
+            setShowPackets(showPackets);
+        }
+    };
+
     return (
         <>
             <CssBaseline />
             <Header searchUpdate={handleSearchMarker} searchState={UpdateBooly} setSecurityBool={handleSecurityBoolChange} displayDetailsBool={handleDisplayDetailsChange} security={handleSecurityChange} />
             <Grid container spacing={3} style={{ width: '100%' }}>
                 <Grid item xs={12} md={4}>
-                    <List listDetails={list} setSecuList={handleSecuListChange} setSecurityBool={handleSecurityBoolChange} checkSecurityBool={securityBool} security={handleSecurityChange} displayDetailsBool={handleDisplayDetailsChange} />
+                    <List listDetails={list} setSecuList={handleSecuListChange} setSecurityBool={handleSecurityBoolChange} checkSecurityBool={securityBool} security={handleSecurityChange} displayDetailsBool={handleDisplayDetailsChange}  packetsBoolChange={handleShowPacketsChange} />
                     <Footer />
-                    <NetworkDetails selectedMarker={marker} searchUpdate={updateMarker} searchState={booly} displayDetails={displayDetails} displayDetailsBool={handleDisplayDetailsChange} />
+                    <NetworkDetails selectedMarker={marker} searchUpdate={updateMarker} searchState={booly} displayDetails={displayDetails} displayDetailsBool={handleDisplayDetailsChange} packetsBoolChange={handleShowPacketsChange} packetsBool={showPackets}/>
+                    <Packets selectedMarker={marker} searchUpdate={updateMarker} searchState={booly} displayDetails={displayDetails} displayDetailsBool={handleDisplayDetailsChange} 
+                    packetsBool={showPackets}/>
                 </Grid>
                 <Grid item xs={12} md={8}>
                     <Map updateMarker={handleMarkerChange} searchState={UpdateBooly} setList={handleListChange} checkSecurityBool={securityBool} listDetails={secuList} checkSecurity={security} displayDetailsBool={handleDisplayDetailsChange} searchUpdate={updateMarker} displayDetails={displayDetails} />

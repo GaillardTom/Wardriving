@@ -127,11 +127,11 @@ app.post('/upload', upload.single('data'), async function (req, res) {
 
 
 });
-app.get('/devices', async (req, res) => {
-    console.log(req.body.mac)
-    if(req.body.mac){ 
+app.get('/devices/:mac', async (req, res) => {
+    
+    if(req.params.mac){ 
 
-        const mac = req.body.mac;
+        const mac = req.params.mac;
         const devices = await GetDevicesByMac(mac);
         console.log('devices:', devices)
         if(devices != []){
@@ -155,21 +155,7 @@ app.get('/map', async(req, res) =>{
     catch{ 
         res.status(402).send("Couldn't Get Map");
     }
-})
-/* This is a get request that is getting the devices from the database corresponding to the mac_address given in the url parameter. */
-app.get('/devices/:mac', async(req,res)=> { 
-    console.log("mac: ", req.body.mac);
-    const mac = req.params.mac
-    console.log(mac)
-    const ans = await GetDevicesByMACFromDB(mac);
-    if(ans){ 
-        res.status(200).send(ans)
-    }else{ 
-        res.status(401).send("No device Found");
-    }
 });
-
-
 
 const PORT = 8080;
 connectCallBack(()=> { 
