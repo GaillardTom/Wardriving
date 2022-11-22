@@ -120,12 +120,18 @@ const Map = (props) => {
   }
 
   const onMapClick = (marker) => {
+    // Remove the clients list
+    props.displayDetailsBool(false)
+    props.packetsBoolChange(false)
+    
     let nameChecker
     if ($(marker.event.target).closest('div').attr('title') === undefined) {
       // FOR BRAVE
       nameChecker = marker.event.target.title
+      
     } else {
       nameChecker = $(marker.event.target).closest('div').attr('title')
+      
       // FOR EDGE
     }
 

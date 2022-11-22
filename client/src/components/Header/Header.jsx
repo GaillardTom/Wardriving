@@ -78,7 +78,11 @@ const Header = (props) => {
             // Location(info.lat, info.lng);
             props.displayDetailsBool(true);
 
+            // Set the state
             props.security('Search')
+
+            // Remove the client window when searching for a network
+            props.packetsBoolChange(false);
         }
         else {
             toast.warning("Please enter information to search", {

@@ -47,6 +47,7 @@ const Packets = (props) => {
 
   const renderData2 = () => {
     if (booleans === true) {
+        if (data.length > 0) {
       return (
         <div className={classes.container}>
           <table className={classes.table}>
@@ -66,15 +67,23 @@ const Packets = (props) => {
                   <td className={classes.title}>{item.channel_client}</td>
                   <td className={classes.title}>{item.client_type}</td>
                   <td className={classes.title}>{item.datasize_client}</td>
-                  <td className={classes.title}>
-                    {item.encrypted_clients_packets}
-                  </td>
+                  <td className={classes.title}>{item.encrypted_clients_packets}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
       )
+    }
+
+else
+{
+    return (
+        <div className={classes.container}>
+            <h3>No Clients for this Network</h3>
+            </div>
+    )
+}
     }
   }
 
