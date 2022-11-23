@@ -30,6 +30,7 @@ const NetworkDetails = (props) => {
   }
 
   useEffect(() => {
+    // Fetch the networks from the database
     fetchData()
   }, [])
 

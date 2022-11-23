@@ -12,7 +12,6 @@ const Footer = (props) => {
     
     const uploadFile = (e) => {
         getFileName(e);
-        console.log(e.target.files[0]);
         e.preventDefault();
         if(String(e.target.files[0].name).includes('.netxml')) {
             let formData = new FormData();
@@ -24,7 +23,6 @@ const Footer = (props) => {
                 }
             }).then((response) => {
                 if(response.status === 200) {
-                console.log("🚀 ~ file: Footer.jsx ~ line 24 ~ uploadFile ~ response", response.data)
                 toast.update(toastID,{ 
                     render: "File Uploaded",
                     type: "success",
@@ -33,7 +31,6 @@ const Footer = (props) => {
                     autoClose: 2000,
                 });
                 formData.delete('data');
-
                 }
                 else{ 
                     toast.update(toastID,{ 
@@ -45,7 +42,6 @@ const Footer = (props) => {
                     });
                 }
             }).catch((error) => {
-                console.log("🚀 ~ file: Footer.jsx ~ line 27 ~ uploadFile ~ error", error)
                 toast.update(toastID, { 
                     render: "Error Uploading File",
                     type: "error",
@@ -68,40 +64,6 @@ const Footer = (props) => {
     const getFileName = (e) => {
         console.log(e.target.files[0].name);
     }
-    
-    useEffect(() => {
-        //toast.configure()
-        /*
-        const uploadForm = document.querySelector('input[type="file"]');
-
-        uploadForm.addEventListener('submit', function(e) {
-            e.preventDefault()
-            if(e.target.uploadFile.files[0] !== undefined) {
-            let file = e.target.uploadFile.files[0]
-
-            let formData = new FormData();
-            formData.append('data', file);
-            axios.post('http://localhost:8080/upload', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            }).then((response) => {
-                console.log("🚀 ~ file: Footer.jsx ~ line 24 ~ uploadFile ~ response", response)
-                alert(response.data);
-            }).catch((error) => {
-                console.log("🚀 ~ file: Footer.jsx ~ line 27 ~ uploadFile ~ error", error)
-                alert(error);
-            })
-            }
-        })
-        */
-        
-
-    
-    }, []);
-       
-
-
     
     const classes = useStyles();
     return ( 

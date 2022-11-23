@@ -131,7 +131,6 @@ const Map = (props) => {
       
     } else {
       nameChecker = $(marker.event.target).closest('div').attr('title')
-      
       // FOR EDGE
     }
 
@@ -152,6 +151,7 @@ const Map = (props) => {
           props.updateMarker(markers[i])
           props.displayDetailsBool(true)
         } else {
+          // The security filter is off
           props.searchState(false)
           props.updateMarker(markers[i])
           props.displayDetailsBool(true)

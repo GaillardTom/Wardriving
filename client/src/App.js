@@ -15,8 +15,13 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
+    // Markers for the map
     const [marker, setMarker] = useState({});
+
+    // Search for markers
     const [updateMarker, setUpdateMarker] = useState([]);
+
+    // 
     const [booly, setBooly] = useState(false);
     const [list, setList] = useState([]);
     const [secuList, setSecuList] = useState([]);
