@@ -5,13 +5,12 @@ import GoogleMapReact from 'google-map-react'
 //import { InfoWindow } from "google-map-react";
 import { Paper, Typography, useMediaQuery } from '@material-ui/core'
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify'
 import useStyles from './styles'
 import axios from 'axios'
 import * as $ from 'jquery'
 
 const Map = (props) => {
-
   // PROPS
   // For security boolean
   const secu = props.checkSecurityBool
@@ -67,6 +66,7 @@ const Map = (props) => {
   }, [])
 
   const renderMarks = (map, maps) => {
+    console.log(props.checkSecurity)
     if (props.displayDetails === false) {
       if (secu === false || props.checkSecurity === 'All') {
         // For All networks
@@ -86,7 +86,7 @@ const Map = (props) => {
         })
       } else {
         // For security type network list
-         // Create the markers from the array of markers
+        // Create the markers from the array of markers
         secuList.forEach((marker) => {
           let mark = new maps.Marker({
             position: {
@@ -123,12 +123,11 @@ const Map = (props) => {
     // Remove the clients list
     props.displayDetailsBool(false)
     props.packetsBoolChange(false)
-    
+
     let nameChecker
     if ($(marker.event.target).closest('div').attr('title') === undefined) {
       // FOR BRAVE
       nameChecker = marker.event.target.title
-      
     } else {
       nameChecker = $(marker.event.target).closest('div').attr('title')
       // FOR EDGE

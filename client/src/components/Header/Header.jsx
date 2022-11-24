@@ -21,7 +21,10 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const Header = (props) => {
+  // Use states variables
+  // For the info searched for
   const [info, setInfo] = React.useState('')
+  // For the search type
   const [searchBy, setSearchBy] = React.useState('')
   const [marker, setMarker] = useState([])
 
@@ -53,13 +56,33 @@ const Header = (props) => {
     axios
       .get('http://localhost:8080/search' + values)
       .then((response) => {
-        // set the marker to the response data
-        setMarker(response.data)
+        if (response && response.data.length > 0) {
+          // set the marker to the response data
+          setMarker(response.data)
 
-        // Update the search info
-        props.searchUpdate(response.data)
-        // Display the network details
-        props.searchState(true)
+          // Location(info.lat, info.lng);
+          props.displayDetailsBool(true)
+
+          // Update the search info
+          props.searchUpdate(response.data)
+          // Display the network details
+          props.searchState(true)
+          // Set the state
+          props.security('Search')
+
+          // Remove the client window when searching for a network
+          props.packetsBoolChange(false)
+        } else {
+          // Error if no networks are found
+          toast.error('No networks found', {
+            position: toast.POSITION.TOP_LEFT,
+            autoClose: 2000,
+          })
+          // Set the search state to false
+          props.searchState(false)
+          //Set the display network details to false
+          props.displayDetailsBool(false)
+        }
       })
       .catch((error) => {
         if (error.response.status === 401) {
@@ -76,20 +99,13 @@ const Header = (props) => {
     if (info.length !== 0 && searchBy !== 'test') {
       // Call the get from database function to get the network details from the database
       GetFromDb(info)
-
-      // Location(info.lat, info.lng);
-      props.displayDetailsBool(true)
-
-      // Set the state
-      props.security('Search')
-
-      // Remove the client window when searching for a network
-      props.packetsBoolChange(false)
     } else {
       toast.warning('Please enter information to search', {
         position: toast.POSITION.BOTTOM_RIGHT,
         autoClose: 2000,
       })
+      props.displayDetailsBool(false)
+      props.searchState(false)
     }
   }
 

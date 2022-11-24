@@ -72,7 +72,9 @@ const Packets = (props) => {
                     <td className={classes.title}>{item.carrier_client}</td>
                     <td className={classes.title}>{item.mac_client}</td>
                     <td className={classes.title}>{item.channel_client}</td>
-                    <td className={classes.title}>{item.encoding_client ? item.encoding_client : "None"}</td>
+                    <td className={classes.title}>
+                      {item.encoding_client ? item.encoding_client : 'None'}
+                    </td>
                     <td className={classes.title}>{item.client_type}</td>
                     <td className={classes.title}>{item.datasize_client}</td>
                     <td className={classes.title}>{item.packetsNb_client}</td>

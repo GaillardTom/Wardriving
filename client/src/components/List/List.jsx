@@ -13,7 +13,7 @@ import useStyles from './styles'
 
 const List = (props) => {
   const classes = useStyles()
-  
+
   // Constant for security type networks list
   const secuList = []
 
@@ -56,7 +56,7 @@ const List = (props) => {
       // Modify the security state
       props.security(tp)
 
-        // Remove the clients list
+      // Remove the clients list
       props.packetsBoolChange(false)
     }
   }
@@ -66,10 +66,7 @@ const List = (props) => {
       <Typography variant="h4"> Networks Around You </Typography>
       <InputLabel>Filter by Security</InputLabel>
       <FormControl className={classes.FormControl}>
-        <Select
-          defaultValue="All"
-          onChange={(e) => GetWifiByConstraint(e.target.value)}
-        >
+        <Select onChange={(e) => GetWifiByConstraint(e.target.value)}>
           <MenuItem value="None">None</MenuItem>
           <MenuItem value="WPA+AES-CCM WPA+PSK">WPA+AES-CCM WPA+PSK</MenuItem>
           <MenuItem value="WPA+AES-CCM WPA+PSK WPA+TKIP">
