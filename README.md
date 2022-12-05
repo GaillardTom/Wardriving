@@ -1,4 +1,4 @@
-![waving](https://capsule-render.vercel.app/api?type=waving&height=200&text=WarFlying&fontAlign=80&fontAlignY=40&color=gradient)
+![waving](https://capsule-render.vercel.app/api?type=waving&height=200&width=400&text=Wardriving-Mapper&fontAlign=50&fontAlignY=40&color=gradient)
 
 ## Goal of this project
 Being able to view a .kismet file from a kismet scan on a map. Each wifi are displayed on the map with markers and can be clicked to display the network informations. 
@@ -16,7 +16,6 @@ the website to create new markers with the networks that were added.
 * [![React][React.js]][React-url]
 * [![JavaScript][JavaScript.com]][JavaScript-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
 * [![Express][Express.com]][Express-url]
 * [![Python][Python.com]][Python-url]
 * [![MongoDB][MongoDB.com]][MongoDB-url]
@@ -45,8 +44,6 @@ Tom Gaillard and Sacha Paquette
 [React-url]: https://reactjs.org/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
 [Express-url]: http://expressjs.com/
 [Express.com]: https://img.shields.io/badge/Express-0769AD?style=for-the-badge&logo=Express&logoColor=red
 [Python.com]: https://img.shields.io/badge/Python-20232A?style=for-the-badge&logo=Python&logoColor=green
