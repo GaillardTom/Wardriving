@@ -82,6 +82,8 @@ const Header = (props) => {
           props.searchState(false)
           //Set the display network details to false
           props.displayDetailsBool(false)
+          props.packetsBoolChange(false)
+
         }
       })
       .catch((error) => {
