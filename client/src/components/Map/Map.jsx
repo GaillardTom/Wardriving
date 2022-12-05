@@ -11,6 +11,8 @@ import axios from 'axios'
 import * as $ from 'jquery'
 
 const Map = (props) => {
+
+
   // PROPS
   // For security boolean
   const secu = props.checkSecurityBool
@@ -46,7 +48,7 @@ const Map = (props) => {
 
   // Constant for markers array and set markers
   const [markers, setMarkers] = useState([])
-
+  const [mark, setMark] = useState([]);
   const fetchData = async () => {
     const response = await axios
       .get('http://localhost:8080/all')
@@ -82,8 +84,13 @@ const Map = (props) => {
             map,
             key: marker._id,
           })
+            mark.addListener("click", () => {
+             onMapClick(mark)
+             //console.log("dsaddd",mark.key)
+            })
           return mark
         })
+        
       } else {
         // For security type network list
         // Create the markers from the array of markers
@@ -119,11 +126,17 @@ const Map = (props) => {
     }
   }
 
+  
+
   const onMapClick = (marker) => {
     // Remove the clients list
     props.displayDetailsBool(false)
     props.packetsBoolChange(false)
+    
+    console.log("salut",marker)
 
+
+    /*
     let nameChecker
     if ($(marker.event.target).closest('div').attr('title') === undefined) {
       // FOR BRAVE
@@ -133,14 +146,17 @@ const Map = (props) => {
       // FOR EDGE
     }
 
+  
+
+
     // Regex to add spaces between the name and the mac address
     const regex = new RegExp('\\s:\\s')
 
     // Split the name and mac address
     const macAddress = nameChecker.split(regex)
-
+ */
     for (let i = 0; i < markers.length; i++) {
-      if (String(macAddress[1]).trim() === String(markers[i].mac_address)) {
+      if (marker.key === markers[i]._id) {
         // Check if the security filter is on
         if (
           props.checkSecurity === markers[i].encryption &&
@@ -171,10 +187,11 @@ const Map = (props) => {
         options={''}
         onChange={''}
         key={props.checkSecurity}
-        onClick={onMapClick}
+        
         onGoogleApiLoaded={({ map, maps }) => renderMarks(map, maps)}
         yesIWantToUseGoogleMapApiInternals={true}
       ></GoogleMapReact>
+      
     </div>
   )
 }
