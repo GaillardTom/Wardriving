@@ -72,6 +72,7 @@ const Header = (props) => {
 
           // Remove the client window when searching for a network
           props.packetsBoolChange(false)
+
         } else {
           // Error if no networks are found
           toast.error('No networks found', {
@@ -83,7 +84,6 @@ const Header = (props) => {
           //Set the display network details to false
           props.displayDetailsBool(false)
           props.packetsBoolChange(false)
-
         }
       })
       .catch((error) => {
