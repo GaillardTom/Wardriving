@@ -85,7 +85,7 @@ app.post('/upload', upload.single('data'), async function (req, res) {
       console.log('converting to csv...')
       //console.log("req.file.path.replace('.kismet', '')", req.file.path.replace('.kismet', ''));
       const python = await spawn('python', [
-        '../testing/NetXML-to-CSV/main.py',
+        './scripts/main.py',
         './' + req.file.path,
         './' + req.file.path.replace('.netxml', '.csv'),
       ])
