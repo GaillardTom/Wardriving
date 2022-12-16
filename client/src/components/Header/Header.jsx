@@ -19,7 +19,6 @@ import IconButton from '@mui/material/IconButton'
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-
 const Header = (props) => {
   // Use states variables
   // For the info searched for
@@ -54,7 +53,7 @@ const Header = (props) => {
 
     // Get the data from the database
     axios
-      .get('http://localhost:8080/search' + values)
+      .get(process.env.REACT_APP_SERVER_URL + '/search' + values)
       .then((response) => {
         if (response && response.data.length > 0) {
           // set the marker to the response data
@@ -117,7 +116,7 @@ const Header = (props) => {
 
   const Naviguater = () => {
     //Naviguate to homepage
-    window.location.href = 'http://localhost:3000/'
+    window.location.href = process.env.REACT_APP_client_url
   }
 
   const handleKeyPress = (event) => {

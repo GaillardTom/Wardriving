@@ -2,19 +2,19 @@ import pymongo
 import pandas as pd
 import sys
 import math
-
+import os 
+from dotenv import load_dotenv
 # CONSTANTS 
 #csvCollection = ConnToDB()
 
 
-
-myClient = pymongo.MongoClient('mongodb://localhost:27017/')
+# Get env variables
+load_dotenv()
+#Setup MongoDB
+myClient = pymongo.MongoClient(os.getenv('MONGO_URL'))
 mydb = myClient['WardrivingMapper']
 csvCollection = mydb.csvCollection
 clientCollection = mydb.clientCollection
-
-#TODO - Add a check to check for duclpicate entries and delete them before adding to the database
-# Still not working correctly
 
 
 

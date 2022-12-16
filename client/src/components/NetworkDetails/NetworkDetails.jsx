@@ -1,12 +1,14 @@
-import React, { Component, useEffect, useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import CloseIcon from '@material-ui/icons/Close'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 import useStyles from './styles'
-//import Marker from './Map/Map'
-//import Map from './Map/Map'
-import axios from 'axios'
+import axios from 'axios';
+
+
+
+
 
 const NetworkDetails = (props) => {
   const selectedMarker = props.selectedMarker
@@ -18,7 +20,7 @@ const NetworkDetails = (props) => {
   const fetchData = async () => {
     // Fetch all wifi networks from the database
     const response = await axios
-      .get('http://localhost:8080/all')
+      .get(process.env.REACT_APP_SERVER_URL + '/all')
       .catch((res) => {
         // Alert the user if there is an error
         alert('Error: ', res)

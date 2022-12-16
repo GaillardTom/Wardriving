@@ -1,4 +1,3 @@
-//require('dotenv').config();
 const express = require('express')
 const cors = require('cors')
 const multer = require('multer')
@@ -21,7 +20,7 @@ const searchRoutes = require('./routes/search')
 //var jwt = require('jsonwebtoken');
 //const {CheckJWT} = require('./middlewares/auth');
 var morgan = require('morgan')
-
+require('dotenv').config();
 //const services = require('./services/services');
 const bodyParser = require('body-parser')
 const app = express()

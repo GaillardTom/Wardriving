@@ -1,14 +1,9 @@
 import React, { Component, useEffect, useState } from 'react'
 import GoogleMapReact from 'google-map-react'
-
-//import {Marker} from "react-google-maps";
-//import { InfoWindow } from "google-map-react";
-import { Paper, Typography, useMediaQuery } from '@material-ui/core'
-import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined'
-import { ToastContainer, toast } from 'react-toastify'
+import { useMediaQuery } from '@material-ui/core'
+import { toast } from 'react-toastify'
 import useStyles from './styles'
 import axios from 'axios'
-import * as $ from 'jquery'
 
 const Map = (props) => {
   // PROPS
@@ -49,7 +44,7 @@ const Map = (props) => {
   const [mark, setMark] = useState([])
   const fetchData = async () => {
     const response = await axios
-      .get('http://localhost:8080/all')
+      .get(process.env.REACT_APP_SERVER_URL + '/all')
       .catch((res) => {
         toast.error('Error: ', res)
       })
@@ -156,7 +151,7 @@ const Map = (props) => {
   return (
     <div className={classes.mapContainer}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyCTQNteh6dCZypdz6QueTQFPwmVK4-gNyk' }}
+        bootstrapURLKeys={{ key: process.env.REACT_APP_bootstrapURLKeys }}
         defaultCenter={coordinates}
         center={coordinates}
         defaultZoom={zoom}

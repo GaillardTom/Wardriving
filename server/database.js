@@ -2,7 +2,8 @@ const { MongoClient, ObjectId } = require('mongodb')
 const spawn = require('await-spawn')
 const fs = require('fs')
 // Connection URL
-const wardriveurl = 'mongodb://localhost:27017'
+require('dotenv').config()
+const wardriveurl = process.env.MONGO_URL
 const wardriveClient = new MongoClient(wardriveurl)
 // Database
 let warDB = wardriveClient.db('WardrivingMapper')

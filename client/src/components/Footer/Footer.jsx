@@ -1,22 +1,12 @@
 import React, { useState, useEffect } from 'react'
 //import { Autocomplete } from "@react-google-maps/api";
 import {
-  AppBar,
-  Toolbar,
-  Typography,
-  InputBase,
-  Box,
-  InputLabel,
-  MenuItem,
-  FormControl,
-  Select,
   Button,
 } from '@mui/material'
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import useStyles from './styles'
 import axios from 'axios'
-
 //toast.configure();
 const Footer = (props) => {
   const uploadFile = (e) => {
@@ -27,7 +17,7 @@ const Footer = (props) => {
       const toastID = toast.loading('Uploading File...')
       formData.append('data', e.target.files[0])
       axios
-        .post('http://localhost:8080/upload', formData, {
+        .post(process.env.REACT_APP_SERVER_URL + '/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },

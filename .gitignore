@@ -9,3 +9,5 @@ Designs
 .vscode
 **/*.*~
 server/uploads
+**/.env
+.env

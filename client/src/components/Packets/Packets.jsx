@@ -17,7 +17,7 @@ const Packets = (props) => {
   const GetClient = async (mac) => {
     // Fetch the clients from the database
     const response = await axios
-      .get('http://localhost:8080/devices/' + mac)
+      .get(process.env.REACT_APP_SERVER_URL + '/devices/' + mac)
       .catch((res) => {
         // Alert the user if there is an error
         toast('Error: ', res)
