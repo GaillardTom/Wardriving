@@ -5,3 +5,5 @@
 .gitignore~
 testing
 Designs
+**/.vscode
+.vscode
