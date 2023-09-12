@@ -16,7 +16,7 @@ the website to create new markers with the networks that were added.
 * [![React][React.js]][React-url]
 * [![JavaScript][JavaScript.com]][JavaScript-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![Vite][Vite.com]][Vite-url]
+* [![Express][Express.com]][Express-url]
 * [![Python][Python.com]][Python-url]
 * [![MongoDB][MongoDB.com]][MongoDB-url]
 ## Installation
@@ -44,8 +44,8 @@ Tom Gaillard and Sacha Paquette
 [React-url]: https://reactjs.org/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
-[Vite-url]: https://vitejs.dev/
-[Vite.com]: https://img.shields.io/badge/Vite-0769AD?style=for-the-badge&logo=Vite&logoColor=red
+[Express-url]: http://expressjs.com/
+[Express.com]: https://img.shields.io/badge/Express-0769AD?style=for-the-badge&logo=Express&logoColor=red
 [Python.com]: https://img.shields.io/badge/Python-20232A?style=for-the-badge&logo=Python&logoColor=green
 [Python-url]: https://www.python.org/
 [MongoDB.com]: https://img.shields.io/badge/MongoDB-563D7C?style=for-the-badge&logo=MongoDB&logoColor=green
